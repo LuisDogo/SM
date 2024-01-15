@@ -28,5 +28,6 @@ CREATE
     (d19:DOCTOR{numCedula: 88990011, nombre: "José", aPat: "Ramos", aMat: "Reyes", rfc: "JRRR654321DEF", especialidad: "Reumatología"}),
     (d20:DOCTOR{numCedula: 99001122, nombre: "Natalia", aPat: "Pérez", aMat: "López", rfc: "NPLL123456MNO", especialidad: "Dermatología"})
 
-
 // Afiliar DOCTOR a HOSPITAL
+MATCH (h:HOSPITAL{nombre:"Hospital general de Ticoman"}), (d:DOCTOR{numCedula: 55719623}) CREATE (d)-[t:TRABAJA_EN {inicio: date("2000-01-10"), salarioMX: 35000.00, horario: "Lunes a Domingo de 6:00 a 13:00"}]->(h)
+MATCH (h:HOSPITAL{nombre:"Hospital general de Ticoman"}), (d:DOCTOR{numCedula: 12345678}) CREATE (d)-[t:TRABAJA_EN {inicio: date("2000-01-15"), salarioMX: 32000.00, horario: "Lunes a Domingo de 6:00 a 13:00"}]->(h)
