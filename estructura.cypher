@@ -27,7 +27,7 @@ CREATE
     (d17:DOCTOR{numCedula: 77889900, nombre: "Elena", aPat: "Guerrero", aMat: "Guzmán", rfc: "EGGG987654ABC", especialidad: "Nutriología"}),
     (d18:DOCTOR{numCedula: 88990011, nombre: "José", aPat: "Ramos", aMat: "Reyes", rfc: "JRRR654321DEF", especialidad: "Reumatología"}),
     (d19:DOCTOR{numCedula: 99001122, nombre: "Natalia", aPat: "Pérez", aMat: "López", rfc: "NPLL123456MNO", especialidad: "Psiquiatría"}),
-    (d20:DOCTOR{numCedula: 00112233, nombre: "Gabriel", aPat: "Moreno", aMat: "Vargas", rfc: "GMVV987654PQR", especialidad: "Alergología"})
+    (d20:DOCTOR{numCedula: 10112233, nombre: "Gabriel", aPat: "Moreno", aMat: "Vargas", rfc: "GMVV987654PQR", especialidad: "Alergología"})
 
 // Afiliar Doctor a Hospital
 
@@ -174,9 +174,9 @@ CREATE (c30:Caso {nombre: "Gastritis", tratamiento: "Antiácidos y Cambios en la
 
 // Creación (doctor)-[:atiende]->(cita)
 
-MATCH (d:Doctor), (c:Cita)
-WHERE d.numCedula=  AND c.folio=
-CREATE (d)-[a:Atiende]->(h)
+// MATCH (d:Doctor), (c:Cita)
+// WHERE d.numCedula=  AND c.folio=
+// CREATE (d)-[a:Atiende]->(h)
 
 // Creación (paciente)-[:TIENE]->(expediente)
 
