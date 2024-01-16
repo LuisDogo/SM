@@ -105,5 +105,35 @@ CREATE (:Cita {folio: 28, motivo: "Dentista", fechaHoraElaboracion: datetime('20
 CREATE (:Cita {folio: 29, motivo: "Fractura", fechaHoraElaboracion: datetime('2012-07-19T09:30:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 30, motivo: "Quemadura", fechaHoraElaboracion: datetime('2008-09-09T12:45:00'), estatus: "Programada"});
 
-
 // Creación de Expedientes
+
+CREATE (:Expediente {numExp: 1, fCreacion: datetime('2010-05-20T18:47:00'), estatura: 175.5, pesoKG: 70.3, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 2, fCreacion: datetime('2009-11-22T15:32:00'), estatura: 162.0, pesoKG: 55.8, tipoSangre: "B-"});
+CREATE (:Expediente {numExp: 3, fCreacion: datetime('2010-07-14T10:18:00'), estatura: 180.2, pesoKG: 80.1, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 4, fCreacion: datetime('2008-09-30T21:04:00'), estatura: 170.7, pesoKG: 68.5, tipoSangre: "AB+"});
+CREATE (:Expediente {numExp: 5, fCreacion: datetime('2011-03-01T08:33:00'), estatura: 160.9, pesoKG: 52.6, tipoSangre: "A-"});
+CREATE (:Expediente {numExp: 6, fCreacion: datetime('2012-08-05T11:49:00'), estatura: 178.0, pesoKG: 75.9, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 7, fCreacion: datetime('2010-10-12T17:18:00'), estatura: 163.5, pesoKG: 58.7, tipoSangre: "O-"});
+CREATE (:Expediente {numExp: 8, fCreacion: datetime('2009-03-19T14:32:00'), estatura: 172.3, pesoKG: 71.8, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 9, fCreacion: datetime('2011-07-07T12:03:00'), estatura: 176.8, pesoKG: 69.2, tipoSangre: "B-"});
+CREATE (:Expediente {numExp: 10, fCreacion: datetime('2012-05-10T09:18:00'), estatura: 165.2, pesoKG: 56.4, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 11, fCreacion: datetime('2011-08-18T14:33:00'), estatura: 168.4, pesoKG: 63.7, tipoSangre: "A-"});
+CREATE (:Expediente {numExp: 12, fCreacion: datetime('2010-02-25T10:05:00'), estatura: 175.1, pesoKG: 72.4, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 13, fCreacion: datetime('2008-12-10T16:18:00'), estatura: 167.8, pesoKG: 61.2, tipoSangre: "O-"});
+CREATE (:Expediente {numExp: 14, fCreacion: datetime('2012-01-02T09:48:00'), estatura: 182.3, pesoKG: 79.6, tipoSangre: "AB+"});
+CREATE (:Expediente {numExp: 15, fCreacion: datetime('2012-09-13T14:03:00'), estatura: 159.6, pesoKG: 54.1, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 16, fCreacion: datetime('2008-08-28T10:34:00'), estatura: 176.7, pesoKG: 68.9, tipoSangre: "B-"});
+CREATE (:Expediente {numExp: 17, fCreacion: datetime('2011-12-24T17:04:00'), estatura: 170.5, pesoKG: 70.0, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 18, fCreacion: datetime('2007-08-09T13:48:00'), estatura: 163.9, pesoKG: 59.8, tipoSangre: "AB-"});
+CREATE (:Expediente {numExp: 19, fCreacion: datetime('2010-11-30T16:04:00'), estatura: 178.8, pesoKG: 76.3, tipoSangre: "A-"});
+CREATE (:Expediente {numExp: 20, fCreacion: datetime('2012-06-28T08:19:00'), estatura: 166.0, pesoKG: 62.5, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 21, fCreacion: datetime('2008-12-03T14:32:00'), estatura: 172.7, pesoKG: 68.7, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 22, fCreacion: datetime('2011-04-16T09:05:00'), estatura: 167.5, pesoKG: 63.2, tipoSangre: "A-"});
+CREATE (:Expediente {numExp: 23, fCreacion: datetime('2009-09-21T11:20:00'), estatura: 180.0, pesoKG: 75.0, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 24, fCreacion: datetime('2012-10-07T15:50:00'), estatura: 164.8, pesoKG: 60.5, tipoSangre: "AB-"});
+CREATE (:Expediente {numExp: 25, fCreacion: datetime('2008-05-14T08:04:00'), estatura: 169.3, pesoKG: 66.4, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 26, fCreacion: datetime('2011-01-29T13:35:00'), estatura: 175.4, pesoKG: 70.9, tipoSangre: "O-"});
+CREATE (:Expediente {numExp: 27, fCreacion: datetime('2009-06-07T10:50:00'), estatura: 163.2, pesoKG: 57.8, tipoSangre: "B-"});
+CREATE (:Expediente {numExp: 28, fCreacion: datetime('2010-04-05T14:20:00'), estatura: 179.1, pesoKG: 73.6, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 29, fCreacion: datetime('2012-07-19T09:35:00'), estatura: 171.6, pesoKG: 69.3, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 30, fCreacion: datetime('2008-09-09T12:50:00'), estatura: 166.7, pesoKG: 62.7, tipoSangre: "O+"});
