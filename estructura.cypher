@@ -65,68 +65,68 @@ CREATE
 // Creación de Citas
 
 CREATE (:Cita {folio: 1, motivo: "Consulta médica", fechaHoraElaboracion: datetime('2010-05-20T8:45:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 2, motivo: "Dentista", fechaHoraElaboracion: datetime('2009-11-22T5:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 3, motivo: "dentista", fechaHoraElaboracion: datetime('2010-07-14T0:15:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 4, motivo: "Consulta médica", fechaHoraElaboracion: datetime('2008-09-30T:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 2, motivo: "Dentista", fechaHoraElaboracion: datetime('2009-11-22T05:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 3, motivo: "dentista", fechaHoraElaboracion: datetime('2010-07-14T10:15:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 4, motivo: "Consulta médica", fechaHoraElaboracion: datetime('2008-09-30T13:00:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 5, motivo: "Examen médico", fechaHoraElaboracion: datetime('2011-03-01T08:30:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 6, motivo: "Cita con el terapeuta", fechaHoraElaboracion: datetime('2012-08-05T1:45:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 7, motivo: "dentista", fechaHoraElaboracion: datetime('2010-10-12T7:15:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 8, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2009-03-19T4:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 9, motivo: "Cita con el psicólogo", fechaHoraElaboracion: datetime('2011-07-07T2:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 7, motivo: "dentista", fechaHoraElaboracion: datetime('2010-10-12T07:15:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 8, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2009-03-19T04:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 9, motivo: "Cita con el psicólogo", fechaHoraElaboracion: datetime('2011-07-07T02:00:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 10, motivo: "Cita con el terapeuta", fechaHoraElaboracion: datetime('2012-05-10T09:15:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 11, motivo: "Fractura", fechaHoraElaboracion: datetime('2011-08-18T4:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 12, motivo: "Cita médica de seguimiento", fechaHoraElaboracion: datetime('2010-02-25T0:00:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 13, motivo: "Entrega de informe", fechaHoraElaboracion: datetime('2008-12-10T6:15:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 11, motivo: "Fractura", fechaHoraElaboracion: datetime('2011-08-18T04:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 12, motivo: "Cita médica de seguimiento", fechaHoraElaboracion: datetime('2010-02-25T20:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 13, motivo: "Entrega de informe", fechaHoraElaboracion: datetime('2008-12-10T06:15:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 14, motivo: "Dentista", fechaHoraElaboracion: datetime('2012-01-02T09:45:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 15, motivo: "Dolor de garganta", fechaHoraElaboracion: datetime('2012-09-13T4:00:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 16, motivo: "Fractura", fechaHoraElaboracion: datetime('2008-08-28T0:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 17, motivo: "Dolor de estomago", fechaHoraElaboracion: datetime('2011-12-24T7:00:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 18, motivo: "Cita con el terapeuta", fechaHoraElaboracion: datetime('2007-08-09T3:45:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 19, motivo: "Fractura", fechaHoraElaboracion: datetime('2010-11-30T6:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 15, motivo: "Dolor de garganta", fechaHoraElaboracion: datetime('2012-09-13T04:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 16, motivo: "Fractura", fechaHoraElaboracion: datetime('2008-08-28T10:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 17, motivo: "Dolor de estomago", fechaHoraElaboracion: datetime('2011-12-24T07:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 18, motivo: "Cita con el terapeuta", fechaHoraElaboracion: datetime('2007-08-09T03:45:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 19, motivo: "Fractura", fechaHoraElaboracion: datetime('2010-11-30T06:00:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 20, motivo: "Consulta psicológica", fechaHoraElaboracion: datetime('2012-06-28T08:15:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 21, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2008-12-03T4:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 21, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2008-12-03T04:30:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 22, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2011-04-16T09:00:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 23, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2009-09-21T1:15:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 24, motivo: "Dentista", fechaHoraElaboracion: datetime('2012-10-07T5:45:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 23, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2009-09-21T01:15:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 24, motivo: "Dentista", fechaHoraElaboracion: datetime('2012-10-07T05:45:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 25, motivo: "Cita con el nutricionista", fechaHoraElaboracion: datetime('2008-05-14T08:00:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 26, motivo: "Cita con el nutricionista", fechaHoraElaboracion: datetime('2011-01-29T3:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 27, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2009-06-07T0:45:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 28, motivo: "Dentista", fechaHoraElaboracion: datetime('2010-04-05T4:15:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 26, motivo: "Cita con el nutricionista", fechaHoraElaboracion: datetime('2011-01-29T03:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 27, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2009-06-07T00:45:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 28, motivo: "Dentista", fechaHoraElaboracion: datetime('2010-04-05T04:15:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 29, motivo: "Fractura", fechaHoraElaboracion: datetime('2012-07-19T09:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 30, motivo: "Quemadura", fechaHoraElaboracion: datetime('2008-09-09T2:45:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 30, motivo: "Quemadura", fechaHoraElaboracion: datetime('2008-09-09T02:45:00'), estatus: "Programada"});
 
 // Creación de Expedientes
 
-CREATE (:Expediente {numExp: 1, fCreacion: datetime('2010-05-20T8:47:00'), estatura: 175.5, pesoKG: 70.3, tipoSangre: "A+"});
-CREATE (:Expediente {numExp: 2, fCreacion: datetime('2009-11-22T5:32:00'), estatura: 162.0, pesoKG: 55.8, tipoSangre: "B-"});
-CREATE (:Expediente {numExp: 3, fCreacion: datetime('2010-07-14T0:18:00'), estatura: 180.2, pesoKG: 80.1, tipoSangre: "O+"});
-CREATE (:Expediente {numExp: 4, fCreacion: datetime('2008-09-30T:04:00'), estatura: 170.7, pesoKG: 68.5, tipoSangre: "AB+"});
-CREATE (:Expediente {numExp: 5, fCreacion: datetime('2011-03-01T08:33:00'), estatura: 160.9, pesoKG: 52.6, tipoSangre: "A-"});
-CREATE (:Expediente {numExp: 6, fCreacion: datetime('2012-08-05T1:49:00'), estatura: 178.0, pesoKG: 75.9, tipoSangre: "B+"});
-CREATE (:Expediente {numExp: 7, fCreacion: datetime('2010-10-12T7:18:00'), estatura: 163.5, pesoKG: 58.7, tipoSangre: "O-"});
-CREATE (:Expediente {numExp: 8, fCreacion: datetime('2009-03-19T4:32:00'), estatura: 172.3, pesoKG: 71.8, tipoSangre: "A+"});
-CREATE (:Expediente {numExp: 9, fCreacion: datetime('2011-07-07T2:03:00'), estatura: 176.8, pesoKG: 69.2, tipoSangre: "B-"});
-CREATE (:Expediente {numExp: 10, fCreacion: datetime('2012-05-10T09:18:00'), estatura: 165.2, pesoKG: 56.4, tipoSangre: "O+"});
-CREATE (:Expediente {numExp: 11, fCreacion: datetime('2011-08-18T4:33:00'), estatura: 168.4, pesoKG: 63.7, tipoSangre: "A-"});
+CREATE (:Expediente {numExp: 1, fCreacion: datetime('2010-01-20T8:47:00'), estatura: 175.5, pesoKG: 70.3, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 2, fCreacion: datetime('2009-01-22T5:32:00'), estatura: 162.0, pesoKG: 55.8, tipoSangre: "B-"});
+CREATE (:Expediente {numExp: 3, fCreacion: datetime('2010-01-14T00:18:00'), estatura: 180.2, pesoKG: 80.1, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 4, fCreacion: datetime('2008-01-30T04:04:00'), estatura: 170.7, pesoKG: 68.5, tipoSangre: "AB+"});
+CREATE (:Expediente {numExp: 5, fCreacion: datetime('2011-01-01T08:33:00'), estatura: 160.9, pesoKG: 52.6, tipoSangre: "A-"});
+CREATE (:Expediente {numExp: 6, fCreacion: datetime('2012-01-05T1:49:00'), estatura: 178.0, pesoKG: 75.9, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 7, fCreacion: datetime('2010-01-12T7:18:00'), estatura: 163.5, pesoKG: 58.7, tipoSangre: "O-"});
+CREATE (:Expediente {numExp: 8, fCreacion: datetime('2009-01-19T4:32:00'), estatura: 172.3, pesoKG: 71.8, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 9, fCreacion: datetime('2011-01-07T2:03:00'), estatura: 176.8, pesoKG: 69.2, tipoSangre: "B-"});
+CREATE (:Expediente {numExp: 10, fCreacion: datetime('2012-01-10T09:18:00'), estatura: 165.2, pesoKG: 56.4, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 11, fCreacion: datetime('2011-01-18T4:33:00'), estatura: 168.4, pesoKG: 63.7, tipoSangre: "A-"});
 CREATE (:Expediente {numExp: 12, fCreacion: datetime('2010-02-25T0:05:00'), estatura: 175.1, pesoKG: 72.4, tipoSangre: "B+"});
-CREATE (:Expediente {numExp: 13, fCreacion: datetime('2008-12-10T6:18:00'), estatura: 167.8, pesoKG: 61.2, tipoSangre: "O-"});
+CREATE (:Expediente {numExp: 13, fCreacion: datetime('2008-01-10T6:18:00'), estatura: 167.8, pesoKG: 61.2, tipoSangre: "O-"});
 CREATE (:Expediente {numExp: 14, fCreacion: datetime('2012-01-02T09:48:00'), estatura: 182.3, pesoKG: 79.6, tipoSangre: "AB+"});
-CREATE (:Expediente {numExp: 15, fCreacion: datetime('2012-09-13T4:03:00'), estatura: 159.6, pesoKG: 54.1, tipoSangre: "A+"});
-CREATE (:Expediente {numExp: 16, fCreacion: datetime('2008-08-28T0:34:00'), estatura: 176.7, pesoKG: 68.9, tipoSangre: "B-"});
-CREATE (:Expediente {numExp: 17, fCreacion: datetime('2011-12-24T7:04:00'), estatura: 170.5, pesoKG: 70.0, tipoSangre: "O+"});
-CREATE (:Expediente {numExp: 18, fCreacion: datetime('2007-08-09T3:48:00'), estatura: 163.9, pesoKG: 59.8, tipoSangre: "AB-"});
-CREATE (:Expediente {numExp: 19, fCreacion: datetime('2010-11-30T6:04:00'), estatura: 178.8, pesoKG: 76.3, tipoSangre: "A-"});
-CREATE (:Expediente {numExp: 20, fCreacion: datetime('2012-06-28T08:19:00'), estatura: 166.0, pesoKG: 62.5, tipoSangre: "B+"});
-CREATE (:Expediente {numExp: 21, fCreacion: datetime('2008-12-03T4:32:00'), estatura: 172.7, pesoKG: 68.7, tipoSangre: "O+"});
-CREATE (:Expediente {numExp: 22, fCreacion: datetime('2011-04-16T09:05:00'), estatura: 167.5, pesoKG: 63.2, tipoSangre: "A-"});
-CREATE (:Expediente {numExp: 23, fCreacion: datetime('2009-09-21T1:20:00'), estatura: 180.0, pesoKG: 75.0, tipoSangre: "B+"});
-CREATE (:Expediente {numExp: 24, fCreacion: datetime('2012-10-07T5:50:00'), estatura: 164.8, pesoKG: 60.5, tipoSangre: "AB-"});
-CREATE (:Expediente {numExp: 25, fCreacion: datetime('2008-05-14T08:04:00'), estatura: 169.3, pesoKG: 66.4, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 15, fCreacion: datetime('2012-01-13T4:03:00'), estatura: 159.6, pesoKG: 54.1, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 16, fCreacion: datetime('2008-01-28T0:34:00'), estatura: 176.7, pesoKG: 68.9, tipoSangre: "B-"});
+CREATE (:Expediente {numExp: 17, fCreacion: datetime('2011-01-24T7:04:00'), estatura: 170.5, pesoKG: 70.0, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 18, fCreacion: datetime('2007-01-09T3:48:00'), estatura: 163.9, pesoKG: 59.8, tipoSangre: "AB-"});
+CREATE (:Expediente {numExp: 19, fCreacion: datetime('2010-01-30T6:04:00'), estatura: 178.8, pesoKG: 76.3, tipoSangre: "A-"});
+CREATE (:Expediente {numExp: 20, fCreacion: datetime('2012-01-28T08:19:00'), estatura: 166.0, pesoKG: 62.5, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 21, fCreacion: datetime('2008-01-03T4:32:00'), estatura: 172.7, pesoKG: 68.7, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 22, fCreacion: datetime('2011-01-16T09:05:00'), estatura: 167.5, pesoKG: 63.2, tipoSangre: "A-"});
+CREATE (:Expediente {numExp: 23, fCreacion: datetime('2009-01-21T1:20:00'), estatura: 180.0, pesoKG: 75.0, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 24, fCreacion: datetime('2012-01-07T5:50:00'), estatura: 164.8, pesoKG: 60.5, tipoSangre: "AB-"});
+CREATE (:Expediente {numExp: 25, fCreacion: datetime('2008-01-14T08:04:00'), estatura: 169.3, pesoKG: 66.4, tipoSangre: "A+"});
 CREATE (:Expediente {numExp: 26, fCreacion: datetime('2011-01-29T3:35:00'), estatura: 175.4, pesoKG: 70.9, tipoSangre: "O-"});
-CREATE (:Expediente {numExp: 27, fCreacion: datetime('2009-06-07T0:50:00'), estatura: 163.2, pesoKG: 57.8, tipoSangre: "B-"});
-CREATE (:Expediente {numExp: 28, fCreacion: datetime('2010-04-05T4:20:00'), estatura: 179.1, pesoKG: 73.6, tipoSangre: "A+"});
-CREATE (:Expediente {numExp: 29, fCreacion: datetime('2012-07-19T09:35:00'), estatura: 171.6, pesoKG: 69.3, tipoSangre: "B+"});
-CREATE (:Expediente {numExp: 30, fCreacion: datetime('2008-09-09T2:50:00'), estatura: 166.7, pesoKG: 62.7, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 27, fCreacion: datetime('2009-01-07T0:50:00'), estatura: 163.2, pesoKG: 57.8, tipoSangre: "B-"});
+CREATE (:Expediente {numExp: 28, fCreacion: datetime('2010-01-05T4:20:00'), estatura: 179.1, pesoKG: 73.6, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 29, fCreacion: datetime('2012-01-19T09:35:00'), estatura: 171.6, pesoKG: 69.3, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 30, fCreacion: datetime('2008-01-09T2:50:00'), estatura: 166.7, pesoKG: 62.7, tipoSangre: "O+"});
 
 // Creación de Casos
 
@@ -163,11 +163,7 @@ CREATE (c30:Caso {nombre: "Gastritis", tratamiento: "Antiácidos y Cambios en la
 
 // Creación (doctor)-[:atiende]->(cita)
 
-// MATCH (d:Doctor), (c:Cita)
-// WHERE d.numCedula=  AND c.folio=
-// CREATE (d)-[a:Atiende]->(h);RETURN h, d, t
 
-// Creación (paciente)-[:TIENE]->(expediente)
 
 
 // (doctor)-[trabaja_en]->(hospital)
@@ -335,3 +331,69 @@ CREATE (p)-[:TIENE]->(e);
 
 MATCH (p:Paciente {nss: 16754595547}), (e:Expediente {numExp: 30})
 CREATE (p)-[:TIENE]->(e);
+
+// Creación de (Paciente)-[realiza]->(Cita)
+
+MATCH (p:Paciente{nss:18210347128}), (c:Cita{folio:1}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-01T18:00:00')}]->(c);
+MATCH (p:Paciente{nss:92223664412}), (c:Cita{folio:2}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-02T12:00:00')}]->(c);
+MATCH (p:Paciente{nss:42908572399}), (c:Cita{folio:3}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-02T13:00:00')}]->(c);
+MATCH (p:Paciente{nss:29399725834}), (c:Cita{folio:4}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-03T14:00:00')}]->(c);
+MATCH (p:Paciente{nss:12185844290}), (c:Cita{folio:5}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-04T11:00:00')}]->(c);
+MATCH (p:Paciente{nss:39970821185}), (c:Cita{folio:6}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-05T10:00:00')}]->(c);
+MATCH (p:Paciente{nss:57871379077}), (c:Cita{folio:7}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-05T14:00:00')}]->(c);
+MATCH (p:Paciente{nss:38032627641}), (c:Cita{folio:8}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-06T08:00:00')}]->(c);
+MATCH (p:Paciente{nss:81506782357}), (c:Cita{folio:9}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-06T12:00:00')}]->(c);
+MATCH (p:Paciente{nss:88075030512}), (c:Cita{folio:10}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-07T07:00:00')}]->(c);
+MATCH (p:Paciente{nss:85145513537}), (c:Cita{folio:11}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-07T13:00:00')}]->(c);
+MATCH (p:Paciente{nss:43245787583}), (c:Cita{folio:12}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-08T07:00:00')}]->(c);
+MATCH (p:Paciente{nss:74933179601}), (c:Cita{folio:13}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-09T14:00:00')}]->(c);
+MATCH (p:Paciente{nss:36949911112}), (c:Cita{folio:14}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-10T18:00:00')}]->(c);
+MATCH (p:Paciente{nss:76755356355}), (c:Cita{folio:15}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-11T19:00:00')}]->(c);
+MATCH (p:Paciente{nss:53284248708}), (c:Cita{folio:16}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-12T20:00:00')}]->(c);
+MATCH (p:Paciente{nss:19405663957}), (c:Cita{folio:17}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-13T13:00:00')}]->(c);
+MATCH (p:Paciente{nss:14432289102}), (c:Cita{folio:18}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-14T14:00:00')}]->(c);
+MATCH (p:Paciente{nss:82915103463}), (c:Cita{folio:19}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-15T07:00:00')}]->(c);
+MATCH (p:Paciente{nss:99422662018}), (c:Cita{folio:20}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-15T12:00:00')}]->(c);
+MATCH (p:Paciente{nss:16719494394}), (c:Cita{folio:21}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-15T14:00:00')}]->(c);
+MATCH (p:Paciente{nss:48627416726}), (c:Cita{folio:22}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-16T18:00:00')}]->(c);
+MATCH (p:Paciente{nss:11766223242}), (c:Cita{folio:23}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-17T22:00:00')}]->(c);
+MATCH (p:Paciente{nss:66994158487}), (c:Cita{folio:24}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-17T23:00:00')}]->(c);
+MATCH (p:Paciente{nss:98410427823}), (c:Cita{folio:25}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-18T18:00:00')}]->(c);
+MATCH (p:Paciente{nss:17814411464}), (c:Cita{folio:26}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-19T13:00:00')}]->(c);
+MATCH (p:Paciente{nss:12688293167}), (c:Cita{folio:27}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-20T15:00:00')}]->(c);
+MATCH (p:Paciente{nss:66223473241}), (c:Cita{folio:28}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-21T16:00:00')}]->(c);
+MATCH (p:Paciente{nss:57162679314}), (c:Cita{folio:29}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-22T11:00:00')}]->(c);
+MATCH (p:Paciente{nss:16754595547}), (c:Cita{folio:30}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-23T19:00:00')}]->(c);
+
+// (Doctor)-[ATIENDE]->(Cita)
+
+MATCH (d:Doctor{numCedula:12345678}), (c:Cita{folio:1}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:23456789}), (c:Cita{folio:2}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:66329240}), (c:Cita{folio:3}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:49883794}), (c:Cita{folio:4}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:57343259}), (c:Cita{folio:5}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:67890123}), (c:Cita{folio:6}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:49883794}), (c:Cita{folio:7}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:89012345}), (c:Cita{folio:8}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:66329240}), (c:Cita{folio:9}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:89012345}), (c:Cita{folio:10}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:78901234}), (c:Cita{folio:11}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:66329240}), (c:Cita{folio:12}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:33445566}), (c:Cita{folio:13}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:12345678}), (c:Cita{folio:14}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:89012345}), (c:Cita{folio:15}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:90123456}), (c:Cita{folio:16}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:99001122}), (c:Cita{folio:17}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:99001122}), (c:Cita{folio:18}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:90123456}), (c:Cita{folio:19}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:22334455}), (c:Cita{folio:20}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:33445566}), (c:Cita{folio:21}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:88990011}), (c:Cita{folio:22}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:55667788}), (c:Cita{folio:23}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:66778899}), (c:Cita{folio:24}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:89012345}), (c:Cita{folio:25}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:23456789}), (c:Cita{folio:26}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:77889900}), (c:Cita{folio:27}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:66329240}), (c:Cita{folio:28}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:89012345}), (c:Cita{folio:29}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:Doctor{numCedula:90123456}), (c:Cita{folio:30}) CREATE (d)-[a:ATIENDE]->(c);
