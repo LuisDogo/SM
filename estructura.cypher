@@ -29,16 +29,6 @@ CREATE
     (d19:DOCTOR{numCedula: 99001122, nombre: "Natalia", aPat: "Pérez", aMat: "López", rfc: "NPLL123456MNO", especialidad: "Psiquiatría"}),
     (d20:DOCTOR{numCedula: 10112233, nombre: "Gabriel", aPat: "Moreno", aMat: "Vargas", rfc: "GMVV987654PQR", especialidad: "Alergología"})
 
-// Afiliar Doctor a Hospital
-
-MATCH (h:Hospital), (d:Doctor)
-WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=55719623
-CREATE (d)-[t:TRABAJA_EN {inicio: date("2000-01-10"), salarioMX: 35000.00, horario: "Lunes a Domingo de 6:00 a 13:00"}]->(h)
-
-MATCH (h:Hospital), (d:Doctor)
-WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=12345678
-CREATE (d)-[t2:TRABAJA_EN {inicio: date("2000-01-15"), salarioMX: 32000.00, horario: "Lunes a Domingo de 6:00 a 13:00"}]->(h)
-
 // Creación de Pacientes
 
 CREATE
