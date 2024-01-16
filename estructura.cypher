@@ -31,8 +31,8 @@ CREATE
 // Creación de Pacientes
 
 CREATE
-    (p1:Paciente{nP:"Luis Daniel",aPat:"Moreno",aMat:"Santamría",tel:5576831468,fNac:date("2003-07-21"),correo:"luisdanielmorenos@gmail.com",sexo:"M",nss:18210347128,curp:"MOSL030721HDFRNSA9"}),
-    (p2:Paciente{nP:"Ana",aPat:"Diaz",aMat:"Sosa",tel:1281691534,fNac:date("1983-03-13"),correo:"anadiazs@gmail.com",sexo:"F",nss:92223664412,curp:"MJGU670109HMCOCO11"}),
+    (p1:Paciente{nP:"Luis Daniel",aPat:"Moreno",aMat:"Santamría",tel:5576831468,fNac:date("2003-07-21"),correo:"luisdanielmorenos@gmail.com",sexo:"H",nss:18210347128,curp:"MOSL030721HDFRNSA9"}),
+    (p2:Paciente{nP:"Ana",aPat:"Diaz",aMat:"Sosa",tel:1281691534,fNac:date("1983-03-13"),correo:"anadiazs@gmail.com",sexo:"M",nss:92223664412,curp:"MJGU670109HMCOCO11"}),
     (p3:Paciente{nP:"Víctor",aPat:"Torres",aMat:"Lopez",tel:7186433739,fNac:date("1993-03-11"),correo:"victortorresl@gmail.com",sexo:"H",nss:42908572399,curp:"AWYB710215HASBNI47"}),
     (p4:Paciente{nP:"Sergio",aPat:"Aguirre",aMat:"Medina",tel:7085460715,fNac:date("1986-05-12"),correo:"sergioaguirrem@gmail.com",sexo:"H",nss:29399725834,curp:"VBXA260111HBSFIP71"}),
     (p5:Paciente{nP:"Daniela",aPat:"Armendariz",aMat:"Correa",tel:3296861977,fNac:date("1976-11-13"),correo:"danielaarmendarizc@gmail.com",sexo:"M",nss:12185844290,curp:"VRLJ050626MCHKLS83"}),
