@@ -5,7 +5,6 @@ CREATE
     (h3:Hospital{nombre:"Hospital Santiago Apóstol",direccion:"Av Cuautepec 32, Jorge Negrete, Gustavo A. Madero, 07280 Ciudad de México, CDMX",capacidad:15})
 
 //  Creación de Doctores
-//  La T en datetime separa la fecha de la hora
 
 CREATE
     (d1:DOCTOR{numCedula: 55719623, nombre: "Lisa", aPat: "Minci", aMat: "Mondstadt", rfc: "MIML850609PJ0", especialidad: "Médico familiar"}),
