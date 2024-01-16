@@ -1,0 +1,119 @@
+MATCH (p1:paciente),(e1:expediente)
+WHERE p1.nss = 18210347128 AND e1.numExp = 1
+CREATE (p1)-[:TIENE]->(e1)
+
+MATCH (p2:paciente),(e2:expediente)
+WHERE p2.nss = 92223664412 AND e2.numExp = 2
+CREATE (p2)-[:TIENE]->(e2)
+
+MATCH (p3:paciente),(e3:expediente)
+WHERE p3.nss = 42908572399 AND e3.numExp = 3
+CREATE (p3)-[:TIENE]->(e3)
+
+MATCH (p4:paciente),(e4:expediente)
+WHERE p4.nss = 29399725834 AND e4.numExp = 4
+CREATE (p4)-[:TIENE]->(e4)
+
+MATCH (p5:paciente),(e5:expediente)
+WHERE p5.nss = 12185844290 AND e5.numExp = 5
+CREATE (p5)-[:TIENE]->(e5)
+
+MATCH (p6:paciente),(e6:expediente)
+WHERE p6.nss = 39970821185 AND e6.numExp = 6
+CREATE (p6)-[:TIENE]->(e6)
+
+MATCH (p7:paciente),(e7:expediente)
+WHERE p7.nss = 57871379077 AND e7.numExp = 7
+CREATE (p7)-[:TIENE]->(e7)
+
+MATCH (p8:paciente),(e8:expediente)
+WHERE p8.nss = 38032627641 AND e8.numExp = 8
+CREATE (p8)-[:TIENE]->(e8)
+
+MATCH (p9:paciente),(e9:expediente)
+WHERE p9.nss = 81506782357 AND e9.numExp = 9
+CREATE (p9)-[:TIENE]->(e9)
+
+MATCH (p10:paciente),(e10:expediente)
+WHERE p10.nss = 85145513537 AND e10.numExp = 10
+CREATE (p10)-[:TIENE]->(e10)
+
+MATCH (p11:paciente),(e11:expediente)
+WHERE p11.nss = 88075030512 AND e11.numExp = 11
+CREATE (p11)-[:TIENE]->(e11)
+
+MATCH (p12:paciente),(e12:expediente)
+WHERE p12.nss = 43245787583 AND e12.numExp = 12
+CREATE (p12)-[:TIENE]->(e12)
+
+MATCH (p13:paciente),(e13:expediente)
+WHERE p13.nss = 74933179601 AND e13.numExp = 13
+CREATE (p13)-[:TIENE]->(e13)
+
+MATCH (p14:paciente),(e14:expediente)
+WHERE p14.nss = 36949911112 AND e14.numExp = 14
+CREATE (p14)-[:TIENE]->(e14)
+
+MATCH (p15:paciente),(e15:expediente)
+WHERE p15.nss = 76755356355 AND e15.numExp = 15
+CREATE (p15)-[:TIENE]->(e15)
+
+MATCH (p16:paciente),(e16:expediente)
+WHERE p16.nss = 53284248708 AND e16.numExp = 16
+CREATE (p16)-[:TIENE]->(e16)
+
+MATCH (p17:paciente),(e17:expediente)
+WHERE p17.nss = 19405663957 AND e17.numExp = 17
+CREATE (p17)-[:TIENE]->(e17)
+
+MATCH (p18:paciente),(e18:expediente)
+WHERE p18.nss = 14432289102 AND e18.numExp = 18
+CREATE (p18)-[:TIENE]->(e18)
+
+MATCH (p19:paciente),(e19:expediente)
+WHERE p19.nss = 82915103463 AND e19.numExp = 19
+CREATE (p19)-[:TIENE]->(e19)
+
+MATCH (p20:paciente),(e02:expediente)
+WHERE p20.nss = 99422662018 AND e20.numExp = 20
+CREATE (p20)-[:TIENE]->(e20)
+
+MATCH (p21:paciente),(e21:expediente)
+WHERE p21.nss = 16719494394 AND e21.numExp = 21
+CREATE (p21)-[:TIENE]->(e21)
+
+MATCH (p22:paciente),(e22:expediente)
+WHERE p22.nss = 48627416726 AND e22.numExp = 22
+CREATE (p22)-[:TIENE]->(e22)
+
+MATCH (p23:paciente),(e23:expediente)
+WHERE p23.nss = 11766223242 AND e23.numExp = 23
+CREATE (p23)-[:TIENE]->(e23)
+
+MATCH (p24:paciente),(e24:expediente)
+WHERE p24.nss = 66994158487 AND e24.numExp = 24
+CREATE (p24)-[:TIENE]->(e24)
+
+MATCH (p25:paciente),(e25:expediente)
+WHERE p25.nss = 98410427823 AND e25.numExp = 25
+CREATE (p25)-[:TIENE]->(e25)2
+
+MATCH (p26:paciente),(e26:expediente)
+WHERE p26.nss = 17814411464 AND e26.numExp = 26
+CREATE (p26)-[:TIENE]->(e26)
+
+MATCH (p27:paciente),(e27:expediente)
+WHERE p27.nss = 12688293167 AND e27.numExp = 27
+CREATE (p27)-[:TIENE]->(e27)
+
+MATCH (p28:paciente),(e28:expediente)
+WHERE p28.nss = 66223473241 AND e28.numExp = 28
+CREATE (p28)-[:TIENE]->(e28)
+
+MATCH (p29:paciente),(e29:expediente)
+WHERE p29.nss = 57162679314 AND e29.numExp = 29
+CREATE (p29)-[:TIENE]->(e29)
+
+MATCH (p30:paciente),(e30:expediente)
+WHERE p30.nss = 16754595547 AND e30.numExp = 30
+CREATE (p30)-[:TIENE]->(e30)
