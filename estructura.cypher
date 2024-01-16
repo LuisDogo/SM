@@ -1,8 +1,8 @@
 //  Creación de Hospitales
 CREATE
-    (h1:HOSPITAL{nombre:"Hospital general de Ticoman",direccion:"Cerrada Plan de San Luis 7, La Purísima Ticoman, Gustavo A. Madero, 07330 Ciudad de México, CDMX",capacidad:30}),
-    (h2:HOSPITAL{nombre:"Hospital general de Cuautepec",direccion:"La Pastora, Gustavo A. Madero, 07290 Ciudad de México, CDMX",capacidad:60}),
-    (h3:HOSPITAL{nombre:"Hospital Santiago Apóstol",direccion:"Av Cuautepec 32, Jorge Negrete, Gustavo A. Madero, 07280 Ciudad de México, CDMX",capacidad:15})
+    (h1:Hospital{nombre:"Hospital general de Ticoman",direccion:"Cerrada Plan de San Luis 7, La Purísima Ticoman, Gustavo A. Madero, 07330 Ciudad de México, CDMX",capacidad:30}),
+    (h2:Hospital{nombre:"Hospital general de Cuautepec",direccion:"La Pastora, Gustavo A. Madero, 07290 Ciudad de México, CDMX",capacidad:60}),
+    (h3:Hospital{nombre:"Hospital Santiago Apóstol",direccion:"Av Cuautepec 32, Jorge Negrete, Gustavo A. Madero, 07280 Ciudad de México, CDMX",capacidad:15})
 
 //  Creación de Doctores
 //  La T en datetime separa la fecha de la hora
@@ -28,119 +28,232 @@ CREATE
     (d19:DOCTOR{numCedula: 99001122, nombre: "Natalia", aPat: "Pérez", aMat: "López", rfc: "NPLL123456MNO", especialidad: "Psiquiatría"}),
     (d20:DOCTOR{numCedula: 00112233, nombre: "Gabriel", aPat: "Moreno", aMat: "Vargas", rfc: "GMVV987654PQR", especialidad: "Alergología"})
 
-// Afiliar DOCTOR a HOSPITAL
+// Doctor trabaja_en Hospital
 
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=55719623 CREATE (d)-[t1:TRABAJA_EN {inicio: date("2000-01-10"), salarioMX: 35000.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=12345678 CREATE (d)-[t2:TRABAJA_EN {inicio: date("2000-01-15"), salarioMX: 34500.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=23456789 CREATE (d)-[t3:TRABAJA_EN {inicio: date("2000-01-16"), salarioMX: 35000.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=66329240 CREATE (d)-[t4:TRABAJA_EN {inicio: date("2000-01-20"), salarioMX: 34500.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=49883794 CREATE (d)-[t5:TRABAJA_EN {inicio: date("2000-01-21"), salarioMX: 34000.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=57343259 CREATE (d)-[t6:TRABAJA_EN {inicio: date("2000-01-24"), salarioMX: 35000.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=67890123 CREATE (d)-[t7:TRABAJA_EN {inicio: date("2000-01-25"), salarioMX: 34500.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=78901234 CREATE (d)-[t8:TRABAJA_EN {inicio: date("2000-01-25"), salarioMX: 35500.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=89012345 CREATE (d)-[t9:TRABAJA_EN {inicio: date("2000-01-25"), salarioMX: 34500.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=90123456 CREATE (d)-[t10:TRABAJA_EN {inicio: date("2000-01-28"), salarioMX: 34000.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=11223344 CREATE (d)-[t11:TRABAJA_EN {inicio: date("2000-01-30"), salarioMX: 34000.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=22334455 CREATE (d)-[t12:TRABAJA_EN {inicio: date("2000-01-03"), salarioMX: 34000.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=33445566 CREATE (d)-[t13:TRABAJA_EN {inicio: date("2000-01-03"), salarioMX: 34500.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=44556677 CREATE (d)-[t14:TRABAJA_EN {inicio: date("2000-01-04"), salarioMX: 35000.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital Santiago Apóstol" AND d.numCedula=55667788 CREATE (d)-[t15:TRABAJA_EN {inicio: date("2000-01-04"), salarioMX: 35500.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital Santiago Apóstol" AND d.numCedula=66778899 CREATE (d)-[t16:TRABAJA_EN {inicio: date("2000-01-10"), salarioMX: 34000.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital Santiago Apóstol" AND d.numCedula=77889900 CREATE (d)-[t17:TRABAJA_EN {inicio: date("2000-01-10"), salarioMX: 35000.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital Santiago Apóstol" AND d.numCedula=88990011 CREATE (d)-[t18:TRABAJA_EN {inicio: date("2000-01-11"), salarioMX: 33500.00, horario: "Lunes a Miércoles de 06:00 a 12:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital Santiago Apóstol" AND d.numCedula=99001122 CREATE (d)-[t19:TRABAJA_EN {inicio: date("2000-01-15"), salarioMX: 17000.00, horario: "Lunes a Domingo de 06:00 a 12:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital Santiago Apóstol" AND d.numCedula=00112233 CREATE (d)-[t20:TRABAJA_EN {inicio: date("2000-01-02"), salarioMX: 14000.00, horario: "Lunes a Miércoles de 06:00 a 12:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=00112233 CREATE (d)-[t21:TRABAJA_EN {inicio: date("2000-01-15"), salarioMX: 13500.00, horario: "Lunes a Domingo de 14:00 a 18:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=99001122 CREATE (d)-[t22:TRABAJA_EN {inicio: date("2000-01-23"), salarioMX: 1200.00, horario: "Lunes a Domingo de 14:00 a 18:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=88990011 CREATE (d)-[t23:TRABAJA_EN {inicio: date("2000-02-20"), salarioMX: 33500.00, horario: "Miércoles a Viernes de 14:00 a 18:00"}]->(h)
-
-MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=88990011 CREATE (d)-[t24:TRABAJA_EN {inicio: date("2000-03-01"), salarioMX: 33500.00, horario: "Sábado y Domingo de 12:00 a 20:00"}]->(h)
 
 // Creación de Pacientes
 CREATE
-    (p1:PACIENTE{nP:"Luis Daniel",aPat:"Moreno",aMat:"Santamría",tel:5576831468,fNac:date("2003-07-21"),correo:"luisdanielmorenos@gmail.com",sexo:"M",nss:18210347128,curp:"MOSL030721HDFRNSA9"}),
-    (p2:PACIENTE{nP:"Ana",aPat:"Diaz",aMat:"Sosa",tel:1281691534,fNac:date("1983-03-13"),correo:"anadiazs@gmail.com",sexo:"F",nss:92223664412,curp:"MJGU670109HMCOCO11"}),
-    (p3:PACIENTE{nP:"Víctor",aPat:"Torres",aMat:"Lopez",tel:7186433739,fNac:date("1993-03-11"),correo:"victortorresl@gmail.com",sexo:"H",nss:42908572399,curp:"AWYB710215HASBNI47"}),
-    (p4:PACIENTE{nP:"Sergio",aPat:"Aguirre",aMat:"Medina",tel:7085460715,fNac:date("1986-05-12"),correo:"sergioaguirrem@gmail.com",sexo:"H",nss:29399725834,curp:"VBXA260111HBSFIP71"}),
-    (p5:PACIENTE{nP:"Daniela",aPat:"Armendariz",aMat:"Correa",tel:3296861977,fNac:date("1976-11-13"),correo:"danielaarmendarizc@gmail.com",sexo:"M",nss:12185844290,curp:"VRLJ050626MCHKLS83"}),
-    (p6:PACIENTE{nP:"Esteban",aPat:"Oñoro",aMat:"Juarez",tel:2852043424,fNac:date("1979-08-11"),correo:null,sexo:"H",nss:39970821185,curp:"SADE811224MPLTVE69"}),
-    (p7:PACIENTE{nP:"Xavier",aPat:"Saucedo",aMat:"Anayansi",tel:7023395293,fNac:date("1983-09-09"),correo:null,sexo:"H",nss:57871379077,curp:"XTYB891023MQTNLR57"}),
-    (p8:PACIENTE{nP:"Sofía",aPat:"Cortiz",aMat:"Dominguez",tel:4720463949,fNac:date("1984-02-12"),correo:"sofiacortizd@gmail.com",sexo:"M",nss:38032627641,curp:"VBDZ480205MCSZOB55"}),
-    (p9:PACIENTE{nP:"Ximena",aPat:"Trucha",aMat:"Cabrebra",tel:2208658378,fNac:date("1991-03-21"),correo:"ximetruchac@gmail.com",sexo:"M",nss:81506782357,curp:"DIRJ610914HGTFKH93"}),
-    (p10:PACIENTE{nP:"Simon",aPat:"Ortuño",aMat:"Medrano",tel:7888165216,fNac:date("1991-07-15"),correo:null,sexo:"H",nss:88075030512,curp:"ZWUX820517MGRVHD14"}),
-    (p11:PACIENTE{nP:"Tito",aPat:"Fuentes",aMat:"Zamora",tel:1957439418,fNac:date("1992-01-13"),correo:"titofuentesz@gmail.com",sexo:"H",nss:85145513537,curp:"GTQD820716HCHLYO62"}),
-    (p12:PACIENTE{nP:"Fernando",aPat:"Corral",aMat:"Chavez",tel:7792050731,fNac:date("1992-06-30"),correo:"fernandocorralc@gmail.com",sexo:"H",nss:43245787583,curp:"VNIA180125MPLZFZ59"}),
-    (p13:PACIENTE{nP:"Knives",aPat:"Chaou",aMat:"Wrong",tel:5307593769,fNac:date("1992-07-01"),correo:"kniveschauw@gmail.com",sexo:"M",nss:74933179601,curp:"TMOE901215MMCBDL25"}),
-    (p14:PACIENTE{nP:"Edgar",aPat:"Wright",aMat:"Prudente",tel:8526768010,fNac:date("1993-02-23"),correo:"edgarwrightp@gmail.com",sexo:"H",nss:36949911112,curp:"QYCQ960325HQRNEW99"}),
-    (p15:PACIENTE{nP:"Gabriela",aPat:"Sariñana",aMat:"Tulipan",tel:5910459187,fNac:date("1993-03-27"),correo:"gabrielasariñanat@gmail.com",sexo:"M",nss:76755356355,curp:"KZEA560501MOCATW84"}),
-    (p16:PACIENTE{nP:"Carolina",aPat:"Corral",aMat:"Mongchan",tel:8973966016,fNac:date("1994-11-13"),correo:"carolinacorralm@gmail.com",sexo:"M",nss:53284248708,curp:"PSKU201124MTSZDM91"}),
-    (p17:PACIENTE{nP:"Iliana",aPat:"Gonzalez",aMat:"Cruz",tel:8764685439,fNac:date("1980-02-20"),correo:"ilianagonzalezc@gmail.com",sexo:"M",nss:19405663957,curp:"CDFZ631213HHGTTJ51"}),
-    (p18:PACIENTE{nP:"Viviana",aPat:"Kiriko",aMat:"Wilson",tel:4025984951,fNac:date("1981-04-14"),correo:null,sexo:"M",nss:14432289102,curp:"CXJB420110HMCMWR30"}),
-    (p19:PACIENTE{nP:"Luz Elena",aPat:"Jurado",aMat:"García",tel:5460442182,fNac:date("1979-03-03"),correo:null,sexo:"M",nss:82915103463,curp:"KVHA740219MSPZQV60"}),
-    (p20:PACIENTE{nP:"Tartaglia",aPat:"Childe",aMat:"Millet",tel:9072492668,fNac:date("1983-03-30"),correo:null,sexo:"H",nss:99422662018,curp:"CVJB490928MVZUIY25"}),
-    (p21:PACIENTE{nP:"Alejandra",aPat:"Cohen",aMat:"Sanchez",tel:7429747005,fNac:date("1997-07-07"),correo:null,sexo:"M",nss:16719494394,curp:"ZNRL840514MMSDCB29"}),
-    (p22:PACIENTE{nP:"Gonzalo",aPat:"Vega",aMat:"Gil",tel:8544264849,fNac:date("1999-09-09"),correo:"gonzalovegag@gmail.com",sexo:"H",nss:48627416726,curp:"LCED940325HVZKVH16"}),
-    (p23:PACIENTE{nP:"Benjamin",aPat:"Casillas",aMat:"Saiz",tel:9589026807,fNac:date("2000-01-10"),correo:"benjamincasillass@gmail.com",sexo:"H",nss:11766223242,curp:"UFIU871224HQTOQW12"}),
-    (p24:PACIENTE{nP:"Carlos",aPat:"Méndez",aMat:"Cortés",tel:6108903799,fNac:date("2001-10-01"),correo:null,sexo:"H",nss:66994158487,curp:"DSQW420920HCCGMV59"}),
-    (p25:PACIENTE{nP:"Maria",aPat:"Aguirre",aMat:"Cano",tel:4493045831,fNac:date("2002-02-20"),correo:"mariaaguirrec@gmail.com",sexo:"M",nss:98410427823,curp:"HKAC630707HTLEPJ90"}),
-    (p26:PACIENTE{nP:"Marcela",aPat:"Braun",aMat:"Guevara",tel:8081535824,fNac:date("2003-03-03"),correo:"marcelabraung@gmail.com",sexo:"M",nss:17814411464,curp:"BYQM490410HTCZBK64"}),
-    (p27:PACIENTE{nP:"Paulina",aPat:"Goméz",aMat:"Laso",tel:3897189379,fNac:date("2004-04-04"),correo:"paulinagomezl@gmail.com",sexo:"M",nss:12688293167,curp:"CIXX140323MDGVTT89"}),
-    (p28:PACIENTE{nP:"Irma",aPat:"Beatriz",aMat:"Pardo",tel:8241880347,fNac:date("2005-05-05"),correo:"irmabeatrizpardo@gmail.com",sexo:"M",nss:66223473241,curp:"TXYY261020MSPRCF93"}),
-    (p29:PACIENTE{nP:"Antonio",aPat:"Casas",aMat:"Zúñiga",tel:2971576230,fNac:date("2006-06-06"),correo:null,sexo:"H",nss:57162679314,curp:"SUUT470428HSPAHN34"}),
-    (p30:PACIENTE{nP:"Melina",aPat:"Bernal",aMat:"Sánchez",tel:9216933594,fNac:date("2007-07-07"),correo:"melinabernals@gmail.com",sexo:"M",nss:16754595547,curp:"HWXM301111MSLPFF55"})
+    (p1:Paciente{nP:"Luis Daniel",aPat:"Moreno",aMat:"Santamría",tel:5576831468,fNac:date("2003-07-21"),correo:"luisdanielmorenos@gmail.com",sexo:"M",nss:18210347128,curp:"MOSL030721HDFRNSA9"}),
+    (p2:Paciente{nP:"Ana",aPat:"Diaz",aMat:"Sosa",tel:1281691534,fNac:date("1983-03-13"),correo:"anadiazs@gmail.com",sexo:"F",nss:92223664412,curp:"MJGU670109HMCOCO11"}),
+    (p3:Paciente{nP:"Víctor",aPat:"Torres",aMat:"Lopez",tel:7186433739,fNac:date("1993-03-11"),correo:"victortorresl@gmail.com",sexo:"H",nss:42908572399,curp:"AWYB710215HASBNI47"}),
+    (p4:Paciente{nP:"Sergio",aPat:"Aguirre",aMat:"Medina",tel:7085460715,fNac:date("1986-05-12"),correo:"sergioaguirrem@gmail.com",sexo:"H",nss:29399725834,curp:"VBXA260111HBSFIP71"}),
+    (p5:Paciente{nP:"Daniela",aPat:"Armendariz",aMat:"Correa",tel:3296861977,fNac:date("1976-11-13"),correo:"danielaarmendarizc@gmail.com",sexo:"M",nss:12185844290,curp:"VRLJ050626MCHKLS83"}),
+    (p6:Paciente{nP:"Esteban",aPat:"Oñoro",aMat:"Juarez",tel:2852043424,fNac:date("1979-08-11"),correo:null,sexo:"H",nss:39970821185,curp:"SADE811224MPLTVE69"}),
+    (p7:Paciente{nP:"Xavier",aPat:"Saucedo",aMat:"Anayansi",tel:7023395293,fNac:date("1983-09-09"),correo:null,sexo:"H",nss:57871379077,curp:"XTYB891023MQTNLR57"}),
+    (p8:Paciente{nP:"Sofía",aPat:"Cortiz",aMat:"Dominguez",tel:4720463949,fNac:date("1984-02-12"),correo:"sofiacortizd@gmail.com",sexo:"M",nss:38032627641,curp:"VBDZ480205MCSZOB55"}),
+    (p9:Paciente{nP:"Ximena",aPat:"Trucha",aMat:"Cabrebra",tel:2208658378,fNac:date("1991-03-21"),correo:"ximetruchac@gmail.com",sexo:"M",nss:81506782357,curp:"DIRJ610914HGTFKH93"}),
+    (p10:Paciente{nP:"Simon",aPat:"Ortuño",aMat:"Medrano",tel:7888165216,fNac:date("1991-07-15"),correo:null,sexo:"H",nss:88075030512,curp:"ZWUX820517MGRVHD14"}),
+    (p11:Paciente{nP:"Tito",aPat:"Fuentes",aMat:"Zamora",tel:1957439418,fNac:date("1992-01-13"),correo:"titofuentesz@gmail.com",sexo:"H",nss:85145513537,curp:"GTQD820716HCHLYO62"}),
+    (p12:Paciente{nP:"Fernando",aPat:"Corral",aMat:"Chavez",tel:7792050731,fNac:date("1992-06-30"),correo:"fernandocorralc@gmail.com",sexo:"H",nss:43245787583,curp:"VNIA180125MPLZFZ59"}),
+    (p13:Paciente{nP:"Knives",aPat:"Chaou",aMat:"Wrong",tel:5307593769,fNac:date("1992-07-01"),correo:"kniveschauw@gmail.com",sexo:"M",nss:74933179601,curp:"TMOE901215MMCBDL25"}),
+    (p14:Paciente{nP:"Edgar",aPat:"Wright",aMat:"Prudente",tel:8526768010,fNac:date("1993-02-23"),correo:"edgarwrightp@gmail.com",sexo:"H",nss:36949911112,curp:"QYCQ960325HQRNEW99"}),
+    (p15:Paciente{nP:"Gabriela",aPat:"Sariñana",aMat:"Tulipan",tel:5910459187,fNac:date("1993-03-27"),correo:"gabrielasariñanat@gmail.com",sexo:"M",nss:76755356355,curp:"KZEA560501MOCATW84"}),
+    (p16:Paciente{nP:"Carolina",aPat:"Corral",aMat:"Mongchan",tel:8973966016,fNac:date("1994-11-13"),correo:"carolinacorralm@gmail.com",sexo:"M",nss:53284248708,curp:"PSKU201124MTSZDM91"}),
+    (p17:Paciente{nP:"Iliana",aPat:"Gonzalez",aMat:"Cruz",tel:8764685439,fNac:date("1980-02-20"),correo:"ilianagonzalezc@gmail.com",sexo:"M",nss:19405663957,curp:"CDFZ631213HHGTTJ51"}),
+    (p18:Paciente{nP:"Viviana",aPat:"Kiriko",aMat:"Wilson",tel:4025984951,fNac:date("1981-04-14"),correo:null,sexo:"M",nss:14432289102,curp:"CXJB420110HMCMWR30"}),
+    (p19:Paciente{nP:"Luz Elena",aPat:"Jurado",aMat:"García",tel:5460442182,fNac:date("1979-03-03"),correo:null,sexo:"M",nss:82915103463,curp:"KVHA740219MSPZQV60"}),
+    (p20:Paciente{nP:"Tartaglia",aPat:"Childe",aMat:"Millet",tel:9072492668,fNac:date("1983-03-30"),correo:null,sexo:"H",nss:99422662018,curp:"CVJB490928MVZUIY25"}),
+    (p21:Paciente{nP:"Alejandra",aPat:"Cohen",aMat:"Sanchez",tel:7429747005,fNac:date("1997-07-07"),correo:null,sexo:"M",nss:16719494394,curp:"ZNRL840514MMSDCB29"}),
+    (p22:Paciente{nP:"Gonzalo",aPat:"Vega",aMat:"Gil",tel:8544264849,fNac:date("1999-09-09"),correo:"gonzalovegag@gmail.com",sexo:"H",nss:48627416726,curp:"LCED940325HVZKVH16"}),
+    (p23:Paciente{nP:"Benjamin",aPat:"Casillas",aMat:"Saiz",tel:9589026807,fNac:date("2000-01-10"),correo:"benjamincasillass@gmail.com",sexo:"H",nss:11766223242,curp:"UFIU871224HQTOQW12"}),
+    (p24:Paciente{nP:"Carlos",aPat:"Méndez",aMat:"Cortés",tel:6108903799,fNac:date("2001-10-01"),correo:null,sexo:"H",nss:66994158487,curp:"DSQW420920HCCGMV59"}),
+    (p25:Paciente{nP:"Maria",aPat:"Aguirre",aMat:"Cano",tel:4493045831,fNac:date("2002-02-20"),correo:"mariaaguirrec@gmail.com",sexo:"M",nss:98410427823,curp:"HKAC630707HTLEPJ90"}),
+    (p26:Paciente{nP:"Marcela",aPat:"Braun",aMat:"Guevara",tel:8081535824,fNac:date("2003-03-03"),correo:"marcelabraung@gmail.com",sexo:"M",nss:17814411464,curp:"BYQM490410HTCZBK64"}),
+    (p27:Paciente{nP:"Paulina",aPat:"Goméz",aMat:"Laso",tel:3897189379,fNac:date("2004-04-04"),correo:"paulinagomezl@gmail.com",sexo:"M",nss:12688293167,curp:"CIXX140323MDGVTT89"}),
+    (p28:Paciente{nP:"Irma",aPat:"Beatriz",aMat:"Pardo",tel:8241880347,fNac:date("2005-05-05"),correo:"irmabeatrizpardo@gmail.com",sexo:"M",nss:66223473241,curp:"TXYY261020MSPRCF93"}),
+    (p29:Paciente{nP:"Antonio",aPat:"Casas",aMat:"Zúñiga",tel:2971576230,fNac:date("2006-06-06"),correo:null,sexo:"H",nss:57162679314,curp:"SUUT470428HSPAHN34"}),
+    (p30:Paciente{nP:"Melina",aPat:"Bernal",aMat:"Sánchez",tel:9216933594,fNac:date("2007-07-07"),correo:"melinabernals@gmail.com",sexo:"M",nss:16754595547,curp:"HWXM301111MSLPFF55"})
 
 // Creación de Citas
-CREATE (:Cita {folio: 1, motivo: "Consulta médica", fechaHoraElaboracion: datetime('2010-05-20T18:45:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 2, motivo: "Dentista", fechaHoraElaboracion: datetime('2009-11-22T15:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 3, motivo: "dentista", fechaHoraElaboracion: datetime('2010-07-14T10:15:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 4, motivo: "Consulta médica", fechaHoraElaboracion: datetime('2008-09-30T21:00:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 5, motivo: "Examen médico", fechaHoraElaboracion: datetime('2011-03-01T08:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 6, motivo: "Cita con el terapeuta", fechaHoraElaboracion: datetime('2012-08-05T11:45:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 7, motivo: "dentista", fechaHoraElaboracion: datetime('2010-10-12T17:15:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 8, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2009-03-19T14:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 9, motivo: "Cita con el psicólogo", fechaHoraElaboracion: datetime('2011-07-07T12:00:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 10, motivo: "Cita con el terapeuta", fechaHoraElaboracion: datetime('2012-05-10T09:15:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 11, motivo: "Fractura", fechaHoraElaboracion: datetime('2011-08-18T14:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 12, motivo: "Cita médica de seguimiento", fechaHoraElaboracion: datetime('2010-02-25T10:00:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 13, motivo: "Entrega de informe", fechaHoraElaboracion: datetime('2008-12-10T16:15:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 14, motivo: "Dentista", fechaHoraElaboracion: datetime('2012-01-02T09:45:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 15, motivo: "Dolor de garganta", fechaHoraElaboracion: datetime('2012-09-13T14:00:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 16, motivo: "Fractura", fechaHoraElaboracion: datetime('2008-08-28T10:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 17, motivo: "Dolor de estomago", fechaHoraElaboracion: datetime('2011-12-24T17:00:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 18, motivo: "Cita con el terapeuta", fechaHoraElaboracion: datetime('2007-08-09T13:45:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 19, motivo: "Fractura", fechaHoraElaboracion: datetime('2010-11-30T16:00:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 20, motivo: "Consulta psicológica", fechaHoraElaboracion: datetime('2012-06-28T08:15:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 21, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2008-12-03T14:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 22, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2011-04-16T09:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 1, motivo: "Azucar alta", fechaHoraElaboracion: datetime('2010-05-20T18:45:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 2, motivo: "Presión alta", fechaHoraElaboracion: datetime('2009-11-22T15:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 3, motivo: "Dolor en manos", fechaHoraElaboracion: datetime('2010-07-14T10:15:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 4, motivo: "Problemas al respirar", fechaHoraElaboracion: datetime('2008-09-30T21:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 5, motivo: "Terapia", fechaHoraElaboracion: datetime('2011-03-01T08:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 6, motivo: "Bulto en seno", fechaHoraElaboracion: datetime('2012-08-05T11:45:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 7, motivo: "Problemas al respirar", fechaHoraElaboracion: datetime('2010-10-12T17:15:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 8, motivo: "Olvida cosas", fechaHoraElaboracion: datetime('2009-03-19T14:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 9, motivo: "Molestia en espalda", fechaHoraElaboracion: datetime('2011-07-07T12:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 10, motivo: "Dolor de cabeza", fechaHoraElaboracion: datetime('2012-05-10T09:15:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 11, motivo: "Escurrimiento nasal y fiebre", fechaHoraElaboracion: datetime('2011-08-18T14:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 12, motivo: "Dolor en huesos", fechaHoraElaboracion: datetime('2010-02-25T10:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 13, motivo: "Dolor en riñones", fechaHoraElaboracion: datetime('2008-12-10T16:15:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 14, motivo: "Exceso de peso", fechaHoraElaboracion: datetime('2012-01-02T09:45:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 15, motivo: "Temblores en cuerpo", fechaHoraElaboracion: datetime('2012-09-13T14:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 16, motivo: "Inflamación y estreñimiento", fechaHoraElaboracion: datetime('2008-08-28T10:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 17, motivo: "Terapia", fechaHoraElaboracion: datetime('2011-12-24T17:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 18, motivo: "Terapia", fechaHoraElaboracion: datetime('2007-08-09T13:45:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 19, motivo: "Cansancio, nauseas y diarrea", fechaHoraElaboracion: datetime('2010-11-30T16:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 20, motivo: "Estornudos y picazon en nariz", fechaHoraElaboracion: datetime('2012-06-28T08:15:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 21, motivo: "Calambres", fechaHoraElaboracion: datetime('2008-12-03T14:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 22, motivo: "Dolor muscular y fiebre", fechaHoraElaboracion: datetime('2011-04-16T09:00:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 23, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2009-09-21T11:15:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 24, motivo: "Dentista", fechaHoraElaboracion: datetime('2012-10-07T15:45:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 25, motivo: "Cita con el nutricionista", fechaHoraElaboracion: datetime('2008-05-14T08:00:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 26, motivo: "Cita con el nutricionista", fechaHoraElaboracion: datetime('2011-01-29T13:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 27, motivo: "Cita familiar", fechaHoraElaboracion: datetime('2009-06-07T10:45:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 28, motivo: "Dentista", fechaHoraElaboracion: datetime('2010-04-05T14:15:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 29, motivo: "Fractura", fechaHoraElaboracion: datetime('2012-07-19T09:30:00'), estatus: "Programada"});
-CREATE (:Cita {folio: 30, motivo: "Quemadura", fechaHoraElaboracion: datetime('2008-09-09T12:45:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 24, motivo: "Problemas para dormir", fechaHoraElaboracion: datetime('2012-10-07T15:45:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 25, motivo: "Convulsiones", fechaHoraElaboracion: datetime('2008-05-14T08:00:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 26, motivo: "Arrítmia cardíaca", fechaHoraElaboracion: datetime('2011-01-29T13:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 27, motivo: "Perdida de peso y dieta", fechaHoraElaboracion: datetime('2009-06-07T10:45:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 28, motivo: "Sensibilidad", fechaHoraElaboracion: datetime('2010-04-05T14:15:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 29, motivo: "Dolor de cabeza", fechaHoraElaboracion: datetime('2012-07-19T09:30:00'), estatus: "Programada"});
+CREATE (:Cita {folio: 30, motivo: "Dolor de estómago", fechaHoraElaboracion: datetime('2008-09-09T12:45:00'), estatus: "Programada"});
+
+// Paciente realiza Cita 
+MATCH (p:Paciente{nss:18210347128}), (c:Cita{folio:1}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-01T18:00:00')}]->(c);
+MATCH (p:Paciente{nss:92223664412}), (c:Cita{folio:2}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-02T12:00:00')}]->(c);
+MATCH (p:Paciente{nss:42908572399}), (c:Cita{folio:3}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-02T13:00:00')}]->(c);
+MATCH (p:Paciente{nss:29399725834}), (c:Cita{folio:4}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-03T14:00:00')}]->(c);
+MATCH (p:Paciente{nss:12185844290}), (c:Cita{folio:5}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-04T11:00:00')}]->(c);
+MATCH (p:Paciente{nss:39970821185}), (c:Cita{folio:6}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-05T10:00:00')}]->(c);
+MATCH (p:Paciente{nss:57871379077}), (c:Cita{folio:7}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-05T14:00:00')}]->(c);
+MATCH (p:Paciente{nss:38032627641}), (c:Cita{folio:8}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-06T08:00:00')}]->(c);
+MATCH (p:Paciente{nss:81506782357}), (c:Cita{folio:9}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-06T12:00:00')}]->(c);
+MATCH (p:Paciente{nss:88075030512}), (c:Cita{folio:10}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-07T07:00:00')}]->(c);
+MATCH (p:Paciente{nss:85145513537}), (c:Cita{folio:11}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-07T13:00:00')}]->(c);
+MATCH (p:Paciente{nss:43245787583}), (c:Cita{folio:12}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-08T07:00:00')}]->(c);
+MATCH (p:Paciente{nss:74933179601}), (c:Cita{folio:13}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-09T14:00:00')}]->(c);
+MATCH (p:Paciente{nss:36949911112}), (c:Cita{folio:14}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-10T18:00:00')}]->(c);
+MATCH (p:Paciente{nss:76755356355}), (c:Cita{folio:15}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-11T19:00:00')}]->(c);
+MATCH (p:Paciente{nss:53284248708}), (c:Cita{folio:16}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-12T20:00:00')}]->(c);
+MATCH (p:Paciente{nss:19405663957}), (c:Cita{folio:17}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-13T13:00:00')}]->(c);
+MATCH (p:Paciente{nss:14432289102}), (c:Cita{folio:18}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-14T14:00:00')}]->(c);
+MATCH (p:Paciente{nss:82915103463}), (c:Cita{folio:19}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-15T07:00:00')}]->(c);
+MATCH (p:Paciente{nss:99422662018}), (c:Cita{folio:20}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-15T12:00:00')}]->(c);
+MATCH (p:Paciente{nss:16719494394}), (c:Cita{folio:21}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-15T14:00:00')}]->(c);
+MATCH (p:Paciente{nss:48627416726}), (c:Cita{folio:22}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-16T18:00:00')}]->(c);
+MATCH (p:Paciente{nss:11766223242}), (c:Cita{folio:23}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-17T22:00:00')}]->(c);
+MATCH (p:Paciente{nss:66994158487}), (c:Cita{folio:24}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-17T23:00:00')}]->(c);
+MATCH (p:Paciente{nss:98410427823}), (c:Cita{folio:25}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-18T18:00:00')}]->(c);
+MATCH (p:Paciente{nss:17814411464}), (c:Cita{folio:26}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-19T13:00:00')}]->(c);
+MATCH (p:Paciente{nss:12688293167}), (c:Cita{folio:27}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-20T15:00:00')}]->(c);
+MATCH (p:Paciente{nss:66223473241}), (c:Cita{folio:28}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-21T16:00:00')}]->(c);
+MATCH (p:Paciente{nss:57162679314}), (c:Cita{folio:29}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-22T11:00:00')}]->(c);
+MATCH (p:Paciente{nss:16754595547}), (c:Cita{folio:30}) CREATE (p)-[r:REALIZA {inicio: datetime('2022-12-23T19:00:00')}]->(c);
+
+// Creación (doctor)-[:atiende]->(cita)
+MATCH (d:DOCTOR{numCedula:12345678}), (c:Cita{folio:1}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:23456789}), (c:Cita{folio:2}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:66329240}), (c:Cita{folio:3}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:49883794}), (c:Cita{folio:4}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:57343259}), (c:Cita{folio:5}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:67890123}), (c:Cita{folio:6}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:49883794}), (c:Cita{folio:7}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:89012345}), (c:Cita{folio:8}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:66329240}), (c:Cita{folio:9}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:89012345}), (c:Cita{folio:10}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:78901234}), (c:Cita{folio:11}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:66329240}), (c:Cita{folio:12}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:33445566}), (c:Cita{folio:13}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:12345678}), (c:Cita{folio:14}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:89012345}), (c:Cita{folio:15}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:90123456}), (c:Cita{folio:16}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:99001122}), (c:Cita{folio:17}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:99001122}), (c:Cita{folio:18}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:90123456}), (c:Cita{folio:19}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:22334455}), (c:Cita{folio:20}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:33445566}), (c:Cita{folio:21}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:88990011}), (c:Cita{folio:22}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:55667788}), (c:Cita{folio:23}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:66778899}), (c:Cita{folio:24}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:89012345}), (c:Cita{folio:25}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:23456789}), (c:Cita{folio:26}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:77889900}), (c:Cita{folio:27}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:66329240}), (c:Cita{folio:28}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:89012345}), (c:Cita{folio:29}) CREATE (d)-[a:ATIENDE]->(c);
+MATCH (d:DOCTOR{numCedula:90123456}), (c:Cita{folio:30}) CREATE (d)-[a:ATIENDE]->(c);
 
 // Creación de Expedientes
+CREATE (:Expediente {numExp: 1, fCreacion: datetime('2010-05-20T18:00:00'), estatura: 175.5, pesoKG: 70.3, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 2, fCreacion: datetime('2009-11-22T15:32:00'), estatura: 162.0, pesoKG: 55.8, tipoSangre: "B-"});
+CREATE (:Expediente {numExp: 3, fCreacion: datetime('2010-07-14T10:18:00'), estatura: 180.2, pesoKG: 80.1, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 4, fCreacion: datetime('2008-09-30T21:04:00'), estatura: 170.7, pesoKG: 68.5, tipoSangre: "AB+"});
+CREATE (:Expediente {numExp: 5, fCreacion: datetime('2011-03-01T08:33:00'), estatura: 160.9, pesoKG: 52.6, tipoSangre: "A-"});
+CREATE (:Expediente {numExp: 6, fCreacion: datetime('2012-08-05T11:49:00'), estatura: 178.0, pesoKG: 75.9, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 7, fCreacion: datetime('2010-10-12T17:18:00'), estatura: 163.5, pesoKG: 58.7, tipoSangre: "O-"});
+CREATE (:Expediente {numExp: 8, fCreacion: datetime('2009-03-19T14:32:00'), estatura: 172.3, pesoKG: 71.8, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 9, fCreacion: datetime('2011-07-07T12:03:00'), estatura: 176.8, pesoKG: 69.2, tipoSangre: "B-"});
+CREATE (:Expediente {numExp: 10, fCreacion: datetime('2012-05-10T09:18:00'), estatura: 165.2, pesoKG: 56.4, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 11, fCreacion: datetime('2011-08-18T14:33:00'), estatura: 168.4, pesoKG: 63.7, tipoSangre: "A-"});
+CREATE (:Expediente {numExp: 12, fCreacion: datetime('2010-02-25T10:05:00'), estatura: 175.1, pesoKG: 72.4, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 13, fCreacion: datetime('2008-12-10T16:18:00'), estatura: 167.8, pesoKG: 61.2, tipoSangre: "O-"});
+CREATE (:Expediente {numExp: 14, fCreacion: datetime('2012-01-02T09:48:00'), estatura: 182.3, pesoKG: 79.6, tipoSangre: "AB+"});
+CREATE (:Expediente {numExp: 15, fCreacion: datetime('2012-09-13T14:03:00'), estatura: 159.6, pesoKG: 54.1, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 16, fCreacion: datetime('2008-08-28T10:34:00'), estatura: 176.7, pesoKG: 68.9, tipoSangre: "B-"});
+CREATE (:Expediente {numExp: 17, fCreacion: datetime('2011-12-24T17:04:00'), estatura: 170.5, pesoKG: 70.0, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 18, fCreacion: datetime('2007-08-09T13:48:00'), estatura: 163.9, pesoKG: 59.8, tipoSangre: "AB-"});
+CREATE (:Expediente {numExp: 19, fCreacion: datetime('2010-11-30T16:04:00'), estatura: 178.8, pesoKG: 76.3, tipoSangre: "A-"});
+CREATE (:Expediente {numExp: 20, fCreacion: datetime('2012-06-28T08:19:00'), estatura: 166.0, pesoKG: 62.5, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 21, fCreacion: datetime('2008-12-03T14:32:00'), estatura: 172.7, pesoKG: 68.7, tipoSangre: "O+"});
+CREATE (:Expediente {numExp: 22, fCreacion: datetime('2011-04-16T09:05:00'), estatura: 167.5, pesoKG: 63.2, tipoSangre: "A-"});
+CREATE (:Expediente {numExp: 23, fCreacion: datetime('2009-09-21T11:20:00'), estatura: 180.0, pesoKG: 75.0, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 24, fCreacion: datetime('2012-10-07T15:50:00'), estatura: 164.8, pesoKG: 60.5, tipoSangre: "AB-"});
+CREATE (:Expediente {numExp: 25, fCreacion: datetime('2008-05-14T08:04:00'), estatura: 169.3, pesoKG: 66.4, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 26, fCreacion: datetime('2011-01-29T13:35:00'), estatura: 175.4, pesoKG: 70.9, tipoSangre: "O-"});
+CREATE (:Expediente {numExp: 27, fCreacion: datetime('2009-06-07T10:50:00'), estatura: 163.2, pesoKG: 57.8, tipoSangre: "B-"});
+CREATE (:Expediente {numExp: 28, fCreacion: datetime('2010-04-05T14:20:00'), estatura: 179.1, pesoKG: 73.6, tipoSangre: "A+"});
+CREATE (:Expediente {numExp: 29, fCreacion: datetime('2012-07-19T09:35:00'), estatura: 171.6, pesoKG: 69.3, tipoSangre: "B+"});
+CREATE (:Expediente {numExp: 30, fCreacion: datetime('2008-09-09T12:50:00'), estatura: 166.7, pesoKG: 62.7, tipoSangre: "O+"});
+
+// Creación de Casos
+CREATE (c1:Caso {nombre: "Diabetes", atamiento: "Insulina"});
+CREATE (c2:Caso {nombre: "Hipertensión", tratamiento: "Antihipertensivos"});
+CREATE (c3:Caso {nombre: "Artritis", ratamiento: "Antiinflamatorios"});
+CREATE (c4:Caso {nombre: "Asma", tratamiento: "Inhaladores"});
+CREATE (c5:Caso {nombre: "Depresión", tratamiento: "Antidepresivos"});
+CREATE (c6:Caso {nombre: "Cáncer de Mama", tratamiento: "Quimioterapia"});
+CREATE (c7:Caso {nombre: "EPOC", fDiagnostico: tratamiento: "Broncodilatadores"});
+CREATE (c8:Caso {nombre: "Alzheimer", tratamiento: "Medicamentos específicos"});
+CREATE (c9:Caso {nombre: "Dolor de Espalda", tratamiento: "Terapia Física"});
+CREATE (c10:Caso {nombre: "Migraña", tratamiento: "Analgésicos"});
+CREATE (c11:Caso {nombre: "Gripe", tratamiento: "Antivirales"});
+CREATE (c12:Caso {nombre: "Osteoporosis", tratamiento: "Suplementos de Calcio"});
+CREATE (c13:Caso {nombre: "Enfermedad Renal Crónica", tratamiento: "Diálisis"});
+CREATE (c14:Caso {nombre: "Hipotiroidismo", tratamiento: "Hormona Tiroidea"});
+CREATE (c15:Caso {nombre: "Enfermedad de Parkinson", tratamiento: "Medicamentos Dopaminérgicos"});
+CREATE (c16:Caso {nombre: "Síndrome del Intestino Irritable", tratamiento: "Cambios en la dieta"});
+CREATE (c17:Caso {nombre: "Ansiedad", fDiagnostico: tratamiento: "Terapia Cognitivo-Conductual"});
+CREATE (c18:Caso {nombre: "Esquizofrenia", tratamiento: "Antipsicóticos"});
+CREATE (c19:Caso {nombre: "Enfermedad de Crohn", tratamiento: "Antiinflamatorios"});
+CREATE (c20:Caso {nombre: "Alergia al Polen", tratamiento: "Antihistamínicos"});
+CREATE (c21:Caso {nombre: "Hipopotasemia", tratamiento: "Suplemento de Potasio"});
+CREATE (c22:Caso {nombre: "Enfermedad de Lyme", tratamiento: "Antibióticos"});
+CREATE (c23:Caso {nombre: "Síndrome de Down", tratamiento: "Terapia de Estimulación"});
+CREATE (c24:Caso {nombre: "Fibromialgia", tratamiento: "Analgesia y Terapia Física"});
+CREATE (c25:Caso {nombre: "Epilepsia", tratamiento: "Antiepilépticos"});
+CREATE (c26:Caso {nombre: "Insuficiencia Cardíaca", tratamiento: "Inhibidores de la ECA"});
+CREATE (c27:Caso {nombre: "Anemia", tratamiento: "Suplemento de Hierro"});
+CREATE (c28:Caso {nombre: "Esclerosis Múltiple", tratamiento: "Inmunomoduladores"});
+CREATE (c29:Caso {nombre: "Enfermedad de Huntington", tratamiento: "Terapia de Soporte"});
+CREATE (c30:Caso {nombre: "Gastritis", tratamiento: "Antiácidos y Cambios en la Dieta"});
+
+// Creación (paciente)-[:TIENE]->(expediente)
+
+// Expediente contiene Caso
+MATCH (e:Expediente{numExp:1}), (x:Caso{nombre: "Diabetes"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:2}), (x:Caso{nombre: "Hipertensión"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:3}), (x:Caso{nombre: "Artritis"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:4}), (x:Caso{nombre: "Asma"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:5}), (x:Caso{nombre: "Depresión"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:6}), (x:Caso{nombre: "Cáncer de Mama"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:7}), (x:Caso{nombre: "EPOC"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:8}), (x:Caso{nombre: "Alzheimer"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:9}), (x:Caso{nombre: "Dolor de Espalda"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:10}), (x:Caso{nombre: "Migraña"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:11}), (x:Caso{nombre: "Gripe"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:12}), (x:Caso{nombre: "Osteoporosis"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:13}), (x:Caso{nombre: "Enfermedad Renal Crónica"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:14}), (x:Caso{nombre: "Hipotiroidismo"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:15}), (x:Caso{nombre: "Enfermedad de Parkinson"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:16}), (x:Caso{nombre: "Síndrome del Intestino Irritable"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:17}), (x:Caso{nombre: "Ansiedad"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:18}), (x:Caso{nombre: "Esquizofrenia"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:19}), (x:Caso{nombre: "Enfermedad de Crohn"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:20}), (x:Caso{nombre: "Alergia al Polen"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:21}), (x:Caso{nombre: "Hipopotasemia"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:22}), (x:Caso{nombre: "Enfermedad de Lyme"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:23}), (x:Caso{nombre: "Síndrome de Down"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:24}), (x:Caso{nombre: "Fibromialgia"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:25}), (x:Caso{nombre: "Epilepsia"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:26}), (x:Caso{nombre: "Insuficiencia Cardíaca"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:27}), (x:Caso{nombre: "Anemia"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:28}), (x:Caso{nombre: "Esclerosis Múltiple"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:29}), (x:Caso{nombre: "Enfermedad de Huntington"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:30}), (x:Caso{nombre: "Gastritis"}) CREATE (e)-[y:CONTIENE]->(x);
