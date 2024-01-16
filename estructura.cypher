@@ -24,22 +24,61 @@ CREATE
     (d15:DOCTOR{numCedula: 55667788, nombre: "Isabel", aPat: "Vega", aMat: "Soto", rfc: "IVSS123456GHI", especialidad: "Cardiología"}),
     (d16:DOCTOR{numCedula: 66778899, nombre: "Alejandro", aPat: "Méndez", aMat: "Torres", rfc: "AMTT876543JKL", especialidad: "Cirugía Plástica"}),
     (d17:DOCTOR{numCedula: 77889900, nombre: "Elena", aPat: "Guerrero", aMat: "Guzmán", rfc: "EGGG987654ABC", especialidad: "Neumología"}),
-    (d18:DOCTOR{numCedula: 77889900, nombre: "Elena", aPat: "Guerrero", aMat: "Guzmán", rfc: "EGGG987654ABC", especialidad: "Neumología"}),
-    (d19:DOCTOR{numCedula: 88990011, nombre: "José", aPat: "Ramos", aMat: "Reyes", rfc: "JRRR654321DEF", especialidad: "Reumatología"}),
-    (d20:DOCTOR{numCedula: 99001122, nombre: "Natalia", aPat: "Pérez", aMat: "López", rfc: "NPLL123456MNO", especialidad: "Dermatología"})
+    (d18:DOCTOR{numCedula: 88990011, nombre: "José", aPat: "Ramos", aMat: "Reyes", rfc: "JRRR654321DEF", especialidad: "Reumatología"}),
+    (d19:DOCTOR{numCedula: 99001122, nombre: "Natalia", aPat: "Pérez", aMat: "López", rfc: "NPLL123456MNO", especialidad: "Dermatología"}),
+    (d20:DOCTOR{numCedula: 00112233, nombre: "Gabriel", aPat: "Moreno", aMat: "Vargas", rfc: "GMVV987654PQR", especialidad: "Gastroenterología"})
 
 // Afiliar DOCTOR a HOSPITAL
 
-MATCH (h:HOSPITAL), (d:DOCTOR)
-WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=55719623
-CREATE (d)-[t:TRABAJA_EN {inicio: date("2000-01-10"), salarioMX: 35000.00, horario: "Lunes a Domingo de 6:00 a 13:00"}]->(h)
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=55719623 CREATE (d)-[t1:TRABAJA_EN {inicio: date("2000-01-10"), salarioMX: 35000.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
 
-MATCH (h:HOSPITAL), (d:DOCTOR)
-WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=12345678
-CREATE (d)-[t2:TRABAJA_EN {inicio: date("2000-01-15"), salarioMX: 32000.00, horario: "Lunes a Domingo de 6:00 a 13:00"}]->(h)
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=12345678 CREATE (d)-[t2:TRABAJA_EN {inicio: date("2000-01-15"), salarioMX: 34500.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=23456789 CREATE (d)-[t3:TRABAJA_EN {inicio: date("2000-01-16"), salarioMX: 35000.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=66329240 CREATE (d)-[t4:TRABAJA_EN {inicio: date("2000-01-20"), salarioMX: 34500.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=49883794 CREATE (d)-[t5:TRABAJA_EN {inicio: date("2000-01-21"), salarioMX: 34000.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=57343259 CREATE (d)-[t6:TRABAJA_EN {inicio: date("2000-01-24"), salarioMX: 35000.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=67890123 CREATE (d)-[t7:TRABAJA_EN {inicio: date("2000-01-25"), salarioMX: 34500.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=78901234 CREATE (d)-[t8:TRABAJA_EN {inicio: date("2000-01-25"), salarioMX: 35500.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=89012345 CREATE (d)-[t9:TRABAJA_EN {inicio: date("2000-01-25"), salarioMX: 34500.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=90123456 CREATE (d)-[t10:TRABAJA_EN {inicio: date("2000-01-28"), salarioMX: 34000.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=11223344 CREATE (d)-[t11:TRABAJA_EN {inicio: date("2000-01-30"), salarioMX: 34000.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=22334455 CREATE (d)-[t12:TRABAJA_EN {inicio: date("2000-01-03"), salarioMX: 34000.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=33445566 CREATE (d)-[t13:TRABAJA_EN {inicio: date("2000-01-03"), salarioMX: 34500.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=44556677 CREATE (d)-[t14:TRABAJA_EN {inicio: date("2000-01-04"), salarioMX: 35000.00, horario: "Lunes a Domingo de 14:00 a 22:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital Santiago Apóstol" AND d.numCedula=55667788 CREATE (d)-[t15:TRABAJA_EN {inicio: date("2000-01-04"), salarioMX: 35500.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital Santiago Apóstol" AND d.numCedula=66778899 CREATE (d)-[t16:TRABAJA_EN {inicio: date("2000-01-10"), salarioMX: 34000.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital Santiago Apóstol" AND d.numCedula=77889900 CREATE (d)-[t17:TRABAJA_EN {inicio: date("2000-01-10"), salarioMX: 35000.00, horario: "Lunes a Domingo de 6:00 a 14:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital Santiago Apóstol" AND d.numCedula=88990011 CREATE (d)-[t18:TRABAJA_EN {inicio: date("2000-01-11"), salarioMX: 33500.00, horario: "Lunes a Miércoles de 06:00 a 12:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital Santiago Apóstol" AND d.numCedula=99001122 CREATE (d)-[t19:TRABAJA_EN {inicio: date("2000-01-15"), salarioMX: 17000.00, horario: "Lunes a Domingo de 06:00 a 12:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital Santiago Apóstol" AND d.numCedula=00112233 CREATE (d)-[t20:TRABAJA_EN {inicio: date("2000-01-02"), salarioMX: 14000.00, horario: "Lunes a Miércoles de 06:00 a 12:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=00112233 CREATE (d)-[t21:TRABAJA_EN {inicio: date("2000-01-15"), salarioMX: 13500.00, horario: "Lunes a Domingo de 14:00 a 18:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=99001122 CREATE (d)-[t22:TRABAJA_EN {inicio: date("2000-01-23"), salarioMX: 1200.00, horario: "Lunes a Domingo de 14:00 a 18:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Cuautepec" AND d.numCedula=88990011 CREATE (d)-[t23:TRABAJA_EN {inicio: date("2000-02-20"), salarioMX: 33500.00, horario: "Miércoles a Viernes de 14:00 a 18:00"}]->(h)
+
+MATCH (h:HOSPITAL), (d:DOCTOR) WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=88990011 CREATE (d)-[t24:TRABAJA_EN {inicio: date("2000-03-01"), salarioMX: 33500.00, horario: "Sábado y Domingo de 12:00 a 20:00"}]->(h)
 
 // Creación de Pacientes
-
 CREATE
     (p1:PACIENTE{nP:"Luis Daniel",aPat:"Moreno",aMat:"Santamría",tel:5576831468,fNac:date("2003-07-21"),correo:"luisdanielmorenos@gmail.com",sexo:"M",nss:18210347128,curp:"MOSL030721HDFRNSA9"}),
     (p2:PACIENTE{nP:"Ana",aPat:"Diaz",aMat:"Sosa",tel:1281691534,fNac:date("1983-03-13"),correo:"anadiazs@gmail.com",sexo:"F",nss:92223664412,curp:"MJGU670109HMCOCO11"}),
@@ -73,7 +112,6 @@ CREATE
     (p30:PACIENTE{nP:"Melina",aPat:"Bernal",aMat:"Sánchez",tel:9216933594,fNac:date("2007-07-07"),correo:"melinabernals@gmail.com",sexo:"M",nss:16754595547,curp:"HWXM301111MSLPFF55"})
 
 // Creación de Citas
-
 CREATE (:Cita {folio: 1, motivo: "Consulta médica", fechaHoraElaboracion: datetime('2010-05-20T18:45:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 2, motivo: "Dentista", fechaHoraElaboracion: datetime('2009-11-22T15:30:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 3, motivo: "dentista", fechaHoraElaboracion: datetime('2010-07-14T10:15:00'), estatus: "Programada"});
@@ -104,6 +142,5 @@ CREATE (:Cita {folio: 27, motivo: "Cita familiar", fechaHoraElaboracion: datetim
 CREATE (:Cita {folio: 28, motivo: "Dentista", fechaHoraElaboracion: datetime('2010-04-05T14:15:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 29, motivo: "Fractura", fechaHoraElaboracion: datetime('2012-07-19T09:30:00'), estatus: "Programada"});
 CREATE (:Cita {folio: 30, motivo: "Quemadura", fechaHoraElaboracion: datetime('2008-09-09T12:45:00'), estatus: "Programada"});
-
 
 // Creación de Expedientes
