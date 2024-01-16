@@ -397,3 +397,36 @@ MATCH (d:Doctor{numCedula:77889900}), (c:Cita{folio:27}) CREATE (d)-[a:ATIENDE]-
 MATCH (d:Doctor{numCedula:66329240}), (c:Cita{folio:28}) CREATE (d)-[a:ATIENDE]->(c);
 MATCH (d:Doctor{numCedula:89012345}), (c:Cita{folio:29}) CREATE (d)-[a:ATIENDE]->(c);
 MATCH (d:Doctor{numCedula:90123456}), (c:Cita{folio:30}) CREATE (d)-[a:ATIENDE]->(c);
+
+// (Expediente)-[:CONTIENE]->(Caso)
+
+MATCH (e:Expediente{numExp:1}), (x:Caso{nombre: "Diabetes"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:2}), (x:Caso{nombre: "Hipertensión"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:3}), (x:Caso{nombre: "Artritis"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:4}), (x:Caso{nombre: "Asma"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:5}), (x:Caso{nombre: "Depresión"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:6}), (x:Caso{nombre: "Cáncer de Mama"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:7}), (x:Caso{nombre: "EPOC"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:8}), (x:Caso{nombre: "Alzheimer"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:9}), (x:Caso{nombre: "Dolor de Espalda"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:10}), (x:Caso{nombre: "Migraña"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:11}), (x:Caso{nombre: "Gripe"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:12}), (x:Caso{nombre: "Osteoporosis"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:13}), (x:Caso{nombre: "Enfermedad Renal Crónica"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:14}), (x:Caso{nombre: "Hipotiroidismo"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:15}), (x:Caso{nombre: "Enfermedad de Parkinson"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:16}), (x:Caso{nombre: "Síndrome del Intestino Irritable"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:17}), (x:Caso{nombre: "Ansiedad"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:18}), (x:Caso{nombre: "Esquizofrenia"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:19}), (x:Caso{nombre: "Enfermedad de Crohn"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:20}), (x:Caso{nombre: "Alergia al Polen"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:21}), (x:Caso{nombre: "Hipopotasemia"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:22}), (x:Caso{nombre: "Enfermedad de Lyme"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:23}), (x:Caso{nombre: "Síndrome de Down"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:24}), (x:Caso{nombre: "Fibromialgia"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:25}), (x:Caso{nombre: "Epilepsia"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:26}), (x:Caso{nombre: "Insuficiencia Cardíaca"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:27}), (x:Caso{nombre: "Anemia"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:28}), (x:Caso{nombre: "Esclerosis Múltiple"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:29}), (x:Caso{nombre: "Enfermedad de Huntington"}) CREATE (e)-[y:CONTIENE]->(x);
+MATCH (e:Expediente{numExp:30}), (x:Caso{nombre: "Gastritis"}) CREATE (e)-[y:CONTIENE]->(x);
