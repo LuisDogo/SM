@@ -139,6 +139,39 @@ CREATE (:Expediente {numExp: 28, fCreacion: datetime('2010-04-05T14:20:00'), est
 CREATE (:Expediente {numExp: 29, fCreacion: datetime('2012-07-19T09:35:00'), estatura: 171.6, pesoKG: 69.3, tipoSangre: "B+"});
 CREATE (:Expediente {numExp: 30, fCreacion: datetime('2008-09-09T12:50:00'), estatura: 166.7, pesoKG: 62.7, tipoSangre: "O+"});
 
+// Creación de Casos
+
+CREATE (c1:Caso {nombre: "Diabetes", atamiento: "Insulina"});
+CREATE (c2:Caso {nombre: "Hipertensión", tratamiento: "Antihipertensivos"});
+CREATE (c3:Caso {nombre: "Artritis", ratamiento: "Antiinflamatorios"});
+CREATE (c4:Caso {nombre: "Asma", tratamiento: "Inhaladores"});
+CREATE (c5:Caso {nombre: "Depresión", tratamiento: "Antidepresivos"});
+CREATE (c6:Caso {nombre: "Cáncer de Mama", tratamiento: "Quimioterapia"});
+CREATE (c7:Caso {nombre: "EPOC", fDiagnostico: tratamiento: "Broncodilatadores"});
+CREATE (c8:Caso {nombre: "Alzheimer", tratamiento: "Medicamentos específicos"});
+CREATE (c9:Caso {nombre: "Dolor de Espalda", tratamiento: "Terapia Física"});
+CREATE (c10:Caso {nombre: "Migraña", tratamiento: "Analgésicos"});
+CREATE (c11:Caso {nombre: "Gripe", tratamiento: "Antivirales"});
+CREATE (c12:Caso {nombre: "Osteoporosis", tratamiento: "Suplementos de Calcio"});
+CREATE (c13:Caso {nombre: "Enfermedad Renal Crónica", tratamiento: "Diálisis"});
+CREATE (c14:Caso {nombre: "Hipotiroidismo", tratamiento: "Hormona Tiroidea"});
+CREATE (c15:Caso {nombre: "Enfermedad de Parkinson", tratamiento: "Medicamentos Dopaminérgicos"});
+CREATE (c16:Caso {nombre: "Síndrome del Intestino Irritable", tratamiento: "Cambios en la dieta"});
+CREATE (c17:Caso {nombre: "Ansiedad", fDiagnostico: tratamiento: "Terapia Cognitivo-Conductual"});
+CREATE (c18:Caso {nombre: "Esquizofrenia", tratamiento: "Antipsicóticos"});
+CREATE (c19:Caso {nombre: "Enfermedad de Crohn", tratamiento: "Antiinflamatorios"});
+CREATE (c20:Caso {nombre: "Alergia al Polen", tratamiento: "Antihistamínicos"});
+CREATE (c21:Caso {nombre: "Hipopotasemia", tratamiento: "Suplemento de Potasio"});
+CREATE (c22:Caso {nombre: "Enfermedad de Lyme", tratamiento: "Antibióticos"});
+CREATE (c23:Caso {nombre: "Síndrome de Down", tratamiento: "Terapia de Estimulación"});
+CREATE (c4:Caso {nombre: "Fibromialgia", tratamiento: "Analgesia y Terapia Física"});
+CREATE (c25:Caso {nombre: "Epilepsia", tratamiento: "Antiepilépticos"});
+CREATE (c26:Caso {nombre: "Insuficiencia Cardíaca", tratamiento: "Inhibidores de la ECA"});
+CREATE (c27:Caso {nombre: "Anemia", tratamiento: "Suplemento de Hierro"});
+CREATE (c28:Caso {nombre: "Esclerosis Múltiple", tratamiento: "Inmunomoduladores"});
+CREATE (c29:Caso {nombre: "Enfermedad de Huntington", tratamiento: "Terapia de Soporte"});
+CREATE (c30:Caso {nombre: "Gastritis", tratamiento: "Antiácidos y Cambios en la Dieta"});
+
 // Creación (doctor)-[:atiende]->(cita)
 
 MATCH (d:Doctor), (c:Cita)
@@ -147,154 +180,4 @@ CREATE (d)-[a:Atiende]->(h)
 
 // Creación (paciente)-[:TIENE]->(expediente)
 
--- Relación 1
-MATCH (p1: PACIENTE {nss: 18210347128})
-MATCH (e1: Expediente {numExp: 1})
-CREATE (p1)-[:TIENE]->(e1)
 
--- Relación 2
-MATCH (p2: PACIENTE {nss: 92223664412})
-MATCH (e2: Expediente {numExp: 2})
-CREATE (p2)-[:TIENE]->(e2)
-
--- Relación 3
-MATCH (p3: PACIENTE {nss: 42908572399})
-MATCH (e3: Expediente {numExp: 3})
-CREATE (p3)-[:TIENE]->(e3)
-
--- Relación 4
-MATCH (p4: PACIENTE {nss: 29399725834})
-MATCH (e4: Expediente {numExp: 4})
-CREATE (p4)-[:TIENE]->(e4)
-
--- Relación 5
-MATCH (p5: PACIENTE {nss: 12185844290})
-MATCH (e5: Expediente {numExp: 5})
-CREATE (p5)-[:TIENE]->(e5)
-
--- Relación 6
-MATCH (p6: PACIENTE {nss: 39970821185})
-MATCH (e6: Expediente {numExp: 6})
-CREATE (p6)-[:TIENE]->(e6)
-
--- Relación 7
-MATCH (p7: PACIENTE {nss: 57871379077})
-MATCH (e7: Expediente {numExp: 7})
-CREATE (p7)-[:TIENE]->(e7)
-
--- Relación 8
-MATCH (p8: PACIENTE {nss: 38032627641})
-MATCH (e8: Expediente {numExp: 8})
-CREATE (p8)-[:TIENE]->(e8)
-
--- Relación 9
-MATCH (p9: PACIENTE {nss: 81506782357})
-MATCH (e9: Expediente {numExp: 9})
-CREATE (p9)-[:TIENE]->(e9)
-
--- Relación 10
-MATCH (p10: PACIENTE {nss: 88075030512})
-MATCH (e10: Expediente {numExp: 10})
-CREATE (p10)-[:TIENE]->(e10)
-
--- Relación 11
-MATCH (p11: PACIENTE {nss: 85145513537})
-MATCH (e11: Expediente {numExp: 11})
-CREATE (p11)-[:TIENE]->(e11)
-
--- Relación 12
-MATCH (p12: PACIENTE {nss: 43245787583})
-MATCH (e12: Expediente {numExp: 12})
-CREATE (p12)-[:TIENE]->(e12)
-
--- Relación 13
-MATCH (p13: PACIENTE {nss: 74933179601})
-MATCH (e13: Expediente {numExp: 13})
-CREATE (p13)-[:TIENE]->(e13)
-
--- Relación 14
-MATCH (p14: PACIENTE {nss: 36949911112})
-MATCH (e14: Expediente {numExp: 14})
-CREATE (p14)-[:TIENE]->(e14)
-
--- Relación 15
-MATCH (p15: PACIENTE {nss: 76755356355})
-MATCH (e15: Expediente {numExp: 15})
-CREATE (p15)-[:TIENE]->(e15)
-
--- Relación 16
-MATCH (p16: PACIENTE {nss: 53284248708})
-MATCH (e16: Expediente {numExp: 16})
-CREATE (p16)-[:TIENE]->(e16)
-
--- Relación 17
-MATCH (p17: PACIENTE {nss: 19405663957})
-MATCH (e17: Expediente {numExp: 17})
-CREATE (p17)-[:TIENE]->(e17)
-
--- Relación 18
-MATCH (p18: PACIENTE {nss: 14432289102})
-MATCH (e18: Expediente {numExp: 18})
-CREATE (p18)-[:TIENE]->(e18)
-
--- Relación 19
-MATCH (p19: PACIENTE {nss: 82915103463})
-MATCH (e19: Expediente {numExp: 19})
-CREATE (p19)-[:TIENE]->(e19)
-
--- Relación 20
-MATCH (p20: PACIENTE {nss: 99422662018})
-MATCH (e20: Expediente {numExp: 20})
-CREATE (p20)-[:TIENE]->(e20)
-
--- Relación 21
-MATCH (p21: PACIENTE {nss: 16719494394})
-MATCH (e21: Expediente {numExp: 21})
-CREATE (p21)-[:TIENE]->(e21)
-
--- Relación 22
-MATCH (p22: PACIENTE {nss: 48627416726})
-MATCH (e22: Expediente {numExp: 22})
-CREATE (p22)-[:TIENE]->(e22)
-
--- Relación 23
-MATCH (p23: PACIENTE {nss: 11766223242})
-MATCH (e23: Expediente {numExp: 23})
-CREATE (p23)-[:TIENE]->(e23)
-
--- Relación 24
-MATCH (p24: PACIENTE {nss: 66994158487})
-MATCH (e24: Expediente {numExp: 24})
-CREATE (p24)-[:TIENE]->(e24)
-
--- Relación 25
-MATCH (p25: PACIENTE {nss: 98410427823})
-MATCH (e25: Expediente {numExp: 25})
-CREATE (p25)-[:TIENE]->(e25)
-
--- Relación 26
-MATCH (p26: PACIENTE {nss: 17814411464})
-MATCH (e26: Expediente {numExp: 26})
-CREATE (p26)-[:TIENE]->(e26)
-
--- Relación 27
-MATCH (p27: PACIENTE {nss: 12688293167})
-MATCH (e27: Expediente {numExp: 27})
-CREATE (p27)-[:TIENE]->(e27)
-
--- Relación 28
-MATCH (p28: PACIENTE {nss: 66223473241})
-MATCH (e28: Expediente {numExp: 28})
-CREATE (p28)-[:TIENE]->(e28)
-
--- Relación 29
-MATCH (p29: PACIENTE {nss: 57162679314})
-MATCH (e29: Expediente {numExp: 29})
-CREATE (p29)-[:TIENE]->(e29)
-
--- Relación 30
-MATCH (p30: PACIENTE {nss: 16754595547})
-MATCH (e30: Expediente {numExp: 30})
-CREATE (p30)-[:TIENE]->(e30)
-
-//
