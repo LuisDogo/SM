@@ -1,76 +1,77 @@
 //  Creación de Hospitales
 CREATE
-    (h1:HOSPITAL{nombre:"Hospital general de Ticoman",direccion:"Cerrada Plan de San Luis 7, La Purísima Ticoman, Gustavo A. Madero, 07330 Ciudad de México, CDMX",capacidad:30}),
-    (h2:HOSPITAL{nombre:"Hospital general de Cuautepec",direccion:"La Pastora, Gustavo A. Madero, 07290 Ciudad de México, CDMX",capacidad:60}),
-    (h3:HOSPITAL{nombre:"Hospital Santiago Apóstol",direccion:"Av Cuautepec 32, Jorge Negrete, Gustavo A. Madero, 07280 Ciudad de México, CDMX",capacidad:15})
+    (h1:Hospital{nombre:"Hospital general de Ticoman",direccion:"Cerrada Plan de San Luis 7, La Purísima Ticoman, Gustavo A. Madero, 07330 Ciudad de México, CDMX",capacidad:30}),
+    (h2:Hospital{nombre:"Hospital general de Cuautepec",direccion:"La Pastora, Gustavo A. Madero, 07290 Ciudad de México, CDMX",capacidad:60}),
+    (h3:Hospital{nombre:"Hospital Santiago Apóstol",direccion:"Av Cuautepec 32, Jorge Negrete, Gustavo A. Madero, 07280 Ciudad de México, CDMX",capacidad:15})
 
 //  Creación de Doctores
 //  La T en datetime separa la fecha de la hora
+
 CREATE
-    (d1:DOCTOR{numCedula: 55719623, nombre: "Lisa", aPat: "Minci", aMat: "Mondstadt", rfc: "MIML850609PJ0", especialidad: "Cardiología"}),
-    (d2:DOCTOR{numCedula: 12345678, nombre: "Juan", aPat: "Gómez", aMat: "Pérez", rfc: "JUGP123456ABC", especialidad: "Cardiología"}),
-    (d3:DOCTOR{numCedula: 23456789, nombre: "Ana", aPat: "Martínez", aMat: "López", rfc: "AMLK987654XYZ", especialidad: "Pediatría"}),
-    (d4:DOCTOR{numCedula: 66329240, nombre: "Carlos", aPat: "Hernández", aMat: "Ruíz", rfc: "CHRL123456DEF", especialidad: "Oftalmología"}),
-    (d5:DOCTOR{numCedula: 49883794, nombre: "Sofía", aPat: "Rodríguez", aMat: "García", rfc: "SARG876543JKL", especialidad: "Neurología"}),
-    (d6:DOCTOR{numCedula: 57343259, nombre: "Pedro", aPat: "López", aMat: "Gómez", rfc: "PLGJ234567MNO", especialidad: "Cirugía General"}),
-    (d7:DOCTOR{numCedula: 67890123, nombre: "Laura", aPat: "Fernández", aMat: "Díaz", rfc: "LFMD654321PQR", especialidad: "Dermatología"}),
-    (d8:DOCTOR{numCedula: 78901234, nombre: "Ricardo", aPat: "Gutiérrez", aMat: "Sánchez", rfc: "RGSP987654ABC", especialidad: "Ginecología"}),
-    (d9:DOCTOR{numCedula: 89012345, nombre: "María", aPat: "Ramírez", aMat: "Núñez", rfc: "MRNN876543DEF", especialidad: "Endocrinología"}),
-    (d10:DOCTOR{numCedula: 90123456, nombre: "Javier", aPat: "Cabrera", aMat: "Lara", rfc: "JCLR123456GHI", especialidad: "Ortopedia"}),
-    (d11:DOCTOR{numCedula: 11223344, nombre: "Silvia", aPat: "García", aMat: "Hernández", rfc: "SGHG987654JKL", especialidad: "Urología"}),
-    (d12:DOCTOR{numCedula: 22334455, nombre: "Martín", aPat: "Fuentes", aMat: "Santos", rfc: "MFSM876543PQR", especialidad: "Oncología"}),
-    (d13:DOCTOR{numCedula: 33445566, nombre: "Lorena", aPat: "Salazar", aMat: "Ortega", rfc: "LSOO654321ABC", especialidad: "Psiquiatría"}),
-    (d14:DOCTOR{numCedula: 44556677, nombre: "Rafael", aPat: "González", aMat: "Ríos", rfc: "RGRR987654DEF", especialidad: "Otorrinolaringología"}),
-    (d15:DOCTOR{numCedula: 55667788, nombre: "Isabel", aPat: "Vega", aMat: "Soto", rfc: "IVSS123456GHI", especialidad: "Cardiología"}),
-    (d16:DOCTOR{numCedula: 66778899, nombre: "Alejandro", aPat: "Méndez", aMat: "Torres", rfc: "AMTT876543JKL", especialidad: "Cirugía Plástica"}),
-    (d17:DOCTOR{numCedula: 77889900, nombre: "Elena", aPat: "Guerrero", aMat: "Guzmán", rfc: "EGGG987654ABC", especialidad: "Neumología"}),
-    (d18:DOCTOR{numCedula: 77889900, nombre: "Elena", aPat: "Guerrero", aMat: "Guzmán", rfc: "EGGG987654ABC", especialidad: "Neumología"}),
-    (d19:DOCTOR{numCedula: 88990011, nombre: "José", aPat: "Ramos", aMat: "Reyes", rfc: "JRRR654321DEF", especialidad: "Reumatología"}),
-    (d20:DOCTOR{numCedula: 99001122, nombre: "Natalia", aPat: "Pérez", aMat: "López", rfc: "NPLL123456MNO", especialidad: "Dermatología"})
+    (d1:DOCTOR{numCedula: 55719623, nombre: "Lisa", aPat: "Minci", aMat: "Mondstadt", rfc: "MIML850609PJ0", especialidad: "Médico familiar"}),
+    (d2:DOCTOR{numCedula: 12345678, nombre: "Juan", aPat: "Gómez", aMat: "Pérez", rfc: "JUGP123456ABC", especialidad: "Endocrinología"}),
+    (d3:DOCTOR{numCedula: 23456789, nombre: "Ana", aPat: "Martínez", aMat: "López", rfc: "AMLK987654XYZ", especialidad: "Cardiología"}),
+    (d4:DOCTOR{numCedula: 66329240, nombre: "Carlos", aPat: "Hernández", aMat: "Ruíz", rfc: "CHRL123456DEF", especialidad: "Reumatología"}),
+    (d5:DOCTOR{numCedula: 49883794, nombre: "Sofía", aPat: "Rodríguez", aMat: "García", rfc: "SARG876543JKL", especialidad: "Neumología"}),
+    (d6:DOCTOR{numCedula: 57343259, nombre: "Pedro", aPat: "López", aMat: "Gómez", rfc: "PLGJ234567MNO", especialidad: "Psiquiatría"}),
+    (d7:DOCTOR{numCedula: 67890123, nombre: "Laura", aPat: "Fernández", aMat: "Díaz", rfc: "LFMD654321PQR", especialidad: "Oncología"}),
+    (d8:DOCTOR{numCedula: 78901234, nombre: "Ricardo", aPat: "Gutiérrez", aMat: "Sánchez", rfc: "RGSP987654ABC", especialidad: "Médico familiar"}),
+    (d9:DOCTOR{numCedula: 89012345, nombre: "María", aPat: "Ramírez", aMat: "Núñez", rfc: "MRNN876543DEF", especialidad: "Neurología"}),
+    (d10:DOCTOR{numCedula: 90123456, nombre: "Javier", aPat: "Cabrera", aMat: "Lara", rfc: "JCLR123456GHI", especialidad: "Gastroenterología"}),
+    (d11:DOCTOR{numCedula: 11223344, nombre: "Silvia", aPat: "García", aMat: "Hernández", rfc: "SGHG987654JKL", especialidad: "Psiquiatría"}),
+    (d12:DOCTOR{numCedula: 22334455, nombre: "Martín", aPat: "Fuentes", aMat: "Santos", rfc: "MFSM876543PQR", especialidad: "Alergología"}),
+    (d13:DOCTOR{numCedula: 33445566, nombre: "Lorena", aPat: "Salazar", aMat: "Ortega", rfc: "LSOO654321ABC", especialidad: "Nefrología"}),
+    (d14:DOCTOR{numCedula: 44556677, nombre: "Rafael", aPat: "González", aMat: "Ríos", rfc: "RGRR987654DEF", especialidad: "Pediatría"}),
+    (d15:DOCTOR{numCedula: 55667788, nombre: "Isabel", aPat: "Vega", aMat: "Soto", rfc: "IVSS123456GHI", especialidad: "Médico familiar"}),
+    (d16:DOCTOR{numCedula: 66778899, nombre: "Alejandro", aPat: "Méndez", aMat: "Torres", rfc: "AMTT876543JKL", especialidad: "Ortopedia"}),
+    (d17:DOCTOR{numCedula: 77889900, nombre: "Elena", aPat: "Guerrero", aMat: "Guzmán", rfc: "EGGG987654ABC", especialidad: "Nutriología"}),
+    (d18:DOCTOR{numCedula: 88990011, nombre: "José", aPat: "Ramos", aMat: "Reyes", rfc: "JRRR654321DEF", especialidad: "Reumatología"}),
+    (d19:DOCTOR{numCedula: 99001122, nombre: "Natalia", aPat: "Pérez", aMat: "López", rfc: "NPLL123456MNO", especialidad: "Psiquiatría"}),
+    (d20:DOCTOR{numCedula: 00112233, nombre: "Gabriel", aPat: "Moreno", aMat: "Vargas", rfc: "GMVV987654PQR", especialidad: "Alergología"})
 
-// Afiliar DOCTOR a HOSPITAL
+// Afiliar Doctor a Hospital
 
-MATCH (h:HOSPITAL), (d:DOCTOR)
+MATCH (h:Hospital), (d:Doctor)
 WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=55719623
 CREATE (d)-[t:TRABAJA_EN {inicio: date("2000-01-10"), salarioMX: 35000.00, horario: "Lunes a Domingo de 6:00 a 13:00"}]->(h)
 
-MATCH (h:HOSPITAL), (d:DOCTOR)
+MATCH (h:Hospital), (d:Doctor)
 WHERE h.nombre="Hospital general de Ticoman" AND d.numCedula=12345678
 CREATE (d)-[t2:TRABAJA_EN {inicio: date("2000-01-15"), salarioMX: 32000.00, horario: "Lunes a Domingo de 6:00 a 13:00"}]->(h)
 
 // Creación de Pacientes
 
 CREATE
-    (p1:PACIENTE{nP:"Luis Daniel",aPat:"Moreno",aMat:"Santamría",tel:5576831468,fNac:date("2003-07-21"),correo:"luisdanielmorenos@gmail.com",sexo:"M",nss:18210347128,curp:"MOSL030721HDFRNSA9"}),
-    (p2:PACIENTE{nP:"Ana",aPat:"Diaz",aMat:"Sosa",tel:1281691534,fNac:date("1983-03-13"),correo:"anadiazs@gmail.com",sexo:"F",nss:92223664412,curp:"MJGU670109HMCOCO11"}),
-    (p3:PACIENTE{nP:"Víctor",aPat:"Torres",aMat:"Lopez",tel:7186433739,fNac:date("1993-03-11"),correo:"victortorresl@gmail.com",sexo:"H",nss:42908572399,curp:"AWYB710215HASBNI47"}),
-    (p4:PACIENTE{nP:"Sergio",aPat:"Aguirre",aMat:"Medina",tel:7085460715,fNac:date("1986-05-12"),correo:"sergioaguirrem@gmail.com",sexo:"H",nss:29399725834,curp:"VBXA260111HBSFIP71"}),
-    (p5:PACIENTE{nP:"Daniela",aPat:"Armendariz",aMat:"Correa",tel:3296861977,fNac:date("1976-11-13"),correo:"danielaarmendarizc@gmail.com",sexo:"M",nss:12185844290,curp:"VRLJ050626MCHKLS83"}),
-    (p6:PACIENTE{nP:"Esteban",aPat:"Oñoro",aMat:"Juarez",tel:2852043424,fNac:date("1979-08-11"),correo:null,sexo:"H",nss:39970821185,curp:"SADE811224MPLTVE69"}),
-    (p7:PACIENTE{nP:"Xavier",aPat:"Saucedo",aMat:"Anayansi",tel:7023395293,fNac:date("1983-09-09"),correo:null,sexo:"H",nss:57871379077,curp:"XTYB891023MQTNLR57"}),
-    (p8:PACIENTE{nP:"Sofía",aPat:"Cortiz",aMat:"Dominguez",tel:4720463949,fNac:date("1984-02-12"),correo:"sofiacortizd@gmail.com",sexo:"M",nss:38032627641,curp:"VBDZ480205MCSZOB55"}),
-    (p9:PACIENTE{nP:"Ximena",aPat:"Trucha",aMat:"Cabrebra",tel:2208658378,fNac:date("1991-03-21"),correo:"ximetruchac@gmail.com",sexo:"M",nss:81506782357,curp:"DIRJ610914HGTFKH93"}),
-    (p10:PACIENTE{nP:"Simon",aPat:"Ortuño",aMat:"Medrano",tel:7888165216,fNac:date("1991-07-15"),correo:null,sexo:"H",nss:88075030512,curp:"ZWUX820517MGRVHD14"}),
-    (p11:PACIENTE{nP:"Tito",aPat:"Fuentes",aMat:"Zamora",tel:1957439418,fNac:date("1992-01-13"),correo:"titofuentesz@gmail.com",sexo:"H",nss:85145513537,curp:"GTQD820716HCHLYO62"}),
-    (p12:PACIENTE{nP:"Fernando",aPat:"Corral",aMat:"Chavez",tel:7792050731,fNac:date("1992-06-30"),correo:"fernandocorralc@gmail.com",sexo:"H",nss:43245787583,curp:"VNIA180125MPLZFZ59"}),
-    (p13:PACIENTE{nP:"Knives",aPat:"Chaou",aMat:"Wrong",tel:5307593769,fNac:date("1992-07-01"),correo:"kniveschauw@gmail.com",sexo:"M",nss:74933179601,curp:"TMOE901215MMCBDL25"}),
-    (p14:PACIENTE{nP:"Edgar",aPat:"Wright",aMat:"Prudente",tel:8526768010,fNac:date("1993-02-23"),correo:"edgarwrightp@gmail.com",sexo:"H",nss:36949911112,curp:"QYCQ960325HQRNEW99"}),
-    (p15:PACIENTE{nP:"Gabriela",aPat:"Sariñana",aMat:"Tulipan",tel:5910459187,fNac:date("1993-03-27"),correo:"gabrielasariñanat@gmail.com",sexo:"M",nss:76755356355,curp:"KZEA560501MOCATW84"}),
-    (p16:PACIENTE{nP:"Carolina",aPat:"Corral",aMat:"Mongchan",tel:8973966016,fNac:date("1994-11-13"),correo:"carolinacorralm@gmail.com",sexo:"M",nss:53284248708,curp:"PSKU201124MTSZDM91"}),
-    (p17:PACIENTE{nP:"Iliana",aPat:"Gonzalez",aMat:"Cruz",tel:8764685439,fNac:date("1980-02-20"),correo:"ilianagonzalezc@gmail.com",sexo:"M",nss:19405663957,curp:"CDFZ631213HHGTTJ51"}),
-    (p18:PACIENTE{nP:"Viviana",aPat:"Kiriko",aMat:"Wilson",tel:4025984951,fNac:date("1981-04-14"),correo:null,sexo:"M",nss:14432289102,curp:"CXJB420110HMCMWR30"}),
-    (p19:PACIENTE{nP:"Luz Elena",aPat:"Jurado",aMat:"García",tel:5460442182,fNac:date("1979-03-03"),correo:null,sexo:"M",nss:82915103463,curp:"KVHA740219MSPZQV60"}),
-    (p20:PACIENTE{nP:"Tartaglia",aPat:"Childe",aMat:"Millet",tel:9072492668,fNac:date("1983-03-30"),correo:null,sexo:"H",nss:99422662018,curp:"CVJB490928MVZUIY25"}),
-    (p21:PACIENTE{nP:"Alejandra",aPat:"Cohen",aMat:"Sanchez",tel:7429747005,fNac:date("1997-07-07"),correo:null,sexo:"M",nss:16719494394,curp:"ZNRL840514MMSDCB29"}),
-    (p22:PACIENTE{nP:"Gonzalo",aPat:"Vega",aMat:"Gil",tel:8544264849,fNac:date("1999-09-09"),correo:"gonzalovegag@gmail.com",sexo:"H",nss:48627416726,curp:"LCED940325HVZKVH16"}),
-    (p23:PACIENTE{nP:"Benjamin",aPat:"Casillas",aMat:"Saiz",tel:9589026807,fNac:date("2000-01-10"),correo:"benjamincasillass@gmail.com",sexo:"H",nss:11766223242,curp:"UFIU871224HQTOQW12"}),
-    (p24:PACIENTE{nP:"Carlos",aPat:"Méndez",aMat:"Cortés",tel:6108903799,fNac:date("2001-10-01"),correo:null,sexo:"H",nss:66994158487,curp:"DSQW420920HCCGMV59"}),
-    (p25:PACIENTE{nP:"Maria",aPat:"Aguirre",aMat:"Cano",tel:4493045831,fNac:date("2002-02-20"),correo:"mariaaguirrec@gmail.com",sexo:"M",nss:98410427823,curp:"HKAC630707HTLEPJ90"}),
-    (p26:PACIENTE{nP:"Marcela",aPat:"Braun",aMat:"Guevara",tel:8081535824,fNac:date("2003-03-03"),correo:"marcelabraung@gmail.com",sexo:"M",nss:17814411464,curp:"BYQM490410HTCZBK64"}),
-    (p27:PACIENTE{nP:"Paulina",aPat:"Goméz",aMat:"Laso",tel:3897189379,fNac:date("2004-04-04"),correo:"paulinagomezl@gmail.com",sexo:"M",nss:12688293167,curp:"CIXX140323MDGVTT89"}),
-    (p28:PACIENTE{nP:"Irma",aPat:"Beatriz",aMat:"Pardo",tel:8241880347,fNac:date("2005-05-05"),correo:"irmabeatrizpardo@gmail.com",sexo:"M",nss:66223473241,curp:"TXYY261020MSPRCF93"}),
-    (p29:PACIENTE{nP:"Antonio",aPat:"Casas",aMat:"Zúñiga",tel:2971576230,fNac:date("2006-06-06"),correo:null,sexo:"H",nss:57162679314,curp:"SUUT470428HSPAHN34"}),
-    (p30:PACIENTE{nP:"Melina",aPat:"Bernal",aMat:"Sánchez",tel:9216933594,fNac:date("2007-07-07"),correo:"melinabernals@gmail.com",sexo:"M",nss:16754595547,curp:"HWXM301111MSLPFF55"})
+    (p1:Paciente{nP:"Luis Daniel",aPat:"Moreno",aMat:"Santamría",tel:5576831468,fNac:date("2003-07-21"),correo:"luisdanielmorenos@gmail.com",sexo:"M",nss:18210347128,curp:"MOSL030721HDFRNSA9"}),
+    (p2:Paciente{nP:"Ana",aPat:"Diaz",aMat:"Sosa",tel:1281691534,fNac:date("1983-03-13"),correo:"anadiazs@gmail.com",sexo:"F",nss:92223664412,curp:"MJGU670109HMCOCO11"}),
+    (p3:Paciente{nP:"Víctor",aPat:"Torres",aMat:"Lopez",tel:7186433739,fNac:date("1993-03-11"),correo:"victortorresl@gmail.com",sexo:"H",nss:42908572399,curp:"AWYB710215HASBNI47"}),
+    (p4:Paciente{nP:"Sergio",aPat:"Aguirre",aMat:"Medina",tel:7085460715,fNac:date("1986-05-12"),correo:"sergioaguirrem@gmail.com",sexo:"H",nss:29399725834,curp:"VBXA260111HBSFIP71"}),
+    (p5:Paciente{nP:"Daniela",aPat:"Armendariz",aMat:"Correa",tel:3296861977,fNac:date("1976-11-13"),correo:"danielaarmendarizc@gmail.com",sexo:"M",nss:12185844290,curp:"VRLJ050626MCHKLS83"}),
+    (p6:Paciente{nP:"Esteban",aPat:"Oñoro",aMat:"Juarez",tel:2852043424,fNac:date("1979-08-11"),correo:null,sexo:"H",nss:39970821185,curp:"SADE811224MPLTVE69"}),
+    (p7:Paciente{nP:"Xavier",aPat:"Saucedo",aMat:"Anayansi",tel:7023395293,fNac:date("1983-09-09"),correo:null,sexo:"H",nss:57871379077,curp:"XTYB891023MQTNLR57"}),
+    (p8:Paciente{nP:"Sofía",aPat:"Cortiz",aMat:"Dominguez",tel:4720463949,fNac:date("1984-02-12"),correo:"sofiacortizd@gmail.com",sexo:"M",nss:38032627641,curp:"VBDZ480205MCSZOB55"}),
+    (p9:Paciente{nP:"Ximena",aPat:"Trucha",aMat:"Cabrebra",tel:2208658378,fNac:date("1991-03-21"),correo:"ximetruchac@gmail.com",sexo:"M",nss:81506782357,curp:"DIRJ610914HGTFKH93"}),
+    (p10:Paciente{nP:"Simon",aPat:"Ortuño",aMat:"Medrano",tel:7888165216,fNac:date("1991-07-15"),correo:null,sexo:"H",nss:88075030512,curp:"ZWUX820517MGRVHD14"}),
+    (p11:Paciente{nP:"Tito",aPat:"Fuentes",aMat:"Zamora",tel:1957439418,fNac:date("1992-01-13"),correo:"titofuentesz@gmail.com",sexo:"H",nss:85145513537,curp:"GTQD820716HCHLYO62"}),
+    (p12:Paciente{nP:"Fernando",aPat:"Corral",aMat:"Chavez",tel:7792050731,fNac:date("1992-06-30"),correo:"fernandocorralc@gmail.com",sexo:"H",nss:43245787583,curp:"VNIA180125MPLZFZ59"}),
+    (p13:Paciente{nP:"Knives",aPat:"Chaou",aMat:"Wrong",tel:5307593769,fNac:date("1992-07-01"),correo:"kniveschauw@gmail.com",sexo:"M",nss:74933179601,curp:"TMOE901215MMCBDL25"}),
+    (p14:Paciente{nP:"Edgar",aPat:"Wright",aMat:"Prudente",tel:8526768010,fNac:date("1993-02-23"),correo:"edgarwrightp@gmail.com",sexo:"H",nss:36949911112,curp:"QYCQ960325HQRNEW99"}),
+    (p15:Paciente{nP:"Gabriela",aPat:"Sariñana",aMat:"Tulipan",tel:5910459187,fNac:date("1993-03-27"),correo:"gabrielasariñanat@gmail.com",sexo:"M",nss:76755356355,curp:"KZEA560501MOCATW84"}),
+    (p16:Paciente{nP:"Carolina",aPat:"Corral",aMat:"Mongchan",tel:8973966016,fNac:date("1994-11-13"),correo:"carolinacorralm@gmail.com",sexo:"M",nss:53284248708,curp:"PSKU201124MTSZDM91"}),
+    (p17:Paciente{nP:"Iliana",aPat:"Gonzalez",aMat:"Cruz",tel:8764685439,fNac:date("1980-02-20"),correo:"ilianagonzalezc@gmail.com",sexo:"M",nss:19405663957,curp:"CDFZ631213HHGTTJ51"}),
+    (p18:Paciente{nP:"Viviana",aPat:"Kiriko",aMat:"Wilson",tel:4025984951,fNac:date("1981-04-14"),correo:null,sexo:"M",nss:14432289102,curp:"CXJB420110HMCMWR30"}),
+    (p19:Paciente{nP:"Luz Elena",aPat:"Jurado",aMat:"García",tel:5460442182,fNac:date("1979-03-03"),correo:null,sexo:"M",nss:82915103463,curp:"KVHA740219MSPZQV60"}),
+    (p20:Paciente{nP:"Tartaglia",aPat:"Childe",aMat:"Millet",tel:9072492668,fNac:date("1983-03-30"),correo:null,sexo:"H",nss:99422662018,curp:"CVJB490928MVZUIY25"}),
+    (p21:Paciente{nP:"Alejandra",aPat:"Cohen",aMat:"Sanchez",tel:7429747005,fNac:date("1997-07-07"),correo:null,sexo:"M",nss:16719494394,curp:"ZNRL840514MMSDCB29"}),
+    (p22:Paciente{nP:"Gonzalo",aPat:"Vega",aMat:"Gil",tel:8544264849,fNac:date("1999-09-09"),correo:"gonzalovegag@gmail.com",sexo:"H",nss:48627416726,curp:"LCED940325HVZKVH16"}),
+    (p23:Paciente{nP:"Benjamin",aPat:"Casillas",aMat:"Saiz",tel:9589026807,fNac:date("2000-01-10"),correo:"benjamincasillass@gmail.com",sexo:"H",nss:11766223242,curp:"UFIU871224HQTOQW12"}),
+    (p24:Paciente{nP:"Carlos",aPat:"Méndez",aMat:"Cortés",tel:6108903799,fNac:date("2001-10-01"),correo:null,sexo:"H",nss:66994158487,curp:"DSQW420920HCCGMV59"}),
+    (p25:Paciente{nP:"Maria",aPat:"Aguirre",aMat:"Cano",tel:4493045831,fNac:date("2002-02-20"),correo:"mariaaguirrec@gmail.com",sexo:"M",nss:98410427823,curp:"HKAC630707HTLEPJ90"}),
+    (p26:Paciente{nP:"Marcela",aPat:"Braun",aMat:"Guevara",tel:8081535824,fNac:date("2003-03-03"),correo:"marcelabraung@gmail.com",sexo:"M",nss:17814411464,curp:"BYQM490410HTCZBK64"}),
+    (p27:Paciente{nP:"Paulina",aPat:"Goméz",aMat:"Laso",tel:3897189379,fNac:date("2004-04-04"),correo:"paulinagomezl@gmail.com",sexo:"M",nss:12688293167,curp:"CIXX140323MDGVTT89"}),
+    (p28:Paciente{nP:"Irma",aPat:"Beatriz",aMat:"Pardo",tel:8241880347,fNac:date("2005-05-05"),correo:"irmabeatrizpardo@gmail.com",sexo:"M",nss:66223473241,curp:"TXYY261020MSPRCF93"}),
+    (p29:Paciente{nP:"Antonio",aPat:"Casas",aMat:"Zúñiga",tel:2971576230,fNac:date("2006-06-06"),correo:null,sexo:"H",nss:57162679314,curp:"SUUT470428HSPAHN34"}),
+    (p30:Paciente{nP:"Melina",aPat:"Bernal",aMat:"Sánchez",tel:9216933594,fNac:date("2007-07-07"),correo:"melinabernals@gmail.com",sexo:"M",nss:16754595547,curp:"HWXM301111MSLPFF55"})
 
 // Creación de Citas
 
@@ -137,3 +138,163 @@ CREATE (:Expediente {numExp: 27, fCreacion: datetime('2009-06-07T10:50:00'), est
 CREATE (:Expediente {numExp: 28, fCreacion: datetime('2010-04-05T14:20:00'), estatura: 179.1, pesoKG: 73.6, tipoSangre: "A+"});
 CREATE (:Expediente {numExp: 29, fCreacion: datetime('2012-07-19T09:35:00'), estatura: 171.6, pesoKG: 69.3, tipoSangre: "B+"});
 CREATE (:Expediente {numExp: 30, fCreacion: datetime('2008-09-09T12:50:00'), estatura: 166.7, pesoKG: 62.7, tipoSangre: "O+"});
+
+// Creación (doctor)-[:atiende]->(cita)
+
+MATCH (d:Doctor), (c:Cita)
+WHERE d.numCedula=  AND c.folio=
+CREATE (d)-[a:Atiende]->(h)
+
+// Creación (paciente)-[:TIENE]->(expediente)
+
+-- Relación 1
+MATCH (p1: PACIENTE {nss: 18210347128})
+MATCH (e1: Expediente {numExp: 1})
+CREATE (p1)-[:TIENE]->(e1)
+
+-- Relación 2
+MATCH (p2: PACIENTE {nss: 92223664412})
+MATCH (e2: Expediente {numExp: 2})
+CREATE (p2)-[:TIENE]->(e2)
+
+-- Relación 3
+MATCH (p3: PACIENTE {nss: 42908572399})
+MATCH (e3: Expediente {numExp: 3})
+CREATE (p3)-[:TIENE]->(e3)
+
+-- Relación 4
+MATCH (p4: PACIENTE {nss: 29399725834})
+MATCH (e4: Expediente {numExp: 4})
+CREATE (p4)-[:TIENE]->(e4)
+
+-- Relación 5
+MATCH (p5: PACIENTE {nss: 12185844290})
+MATCH (e5: Expediente {numExp: 5})
+CREATE (p5)-[:TIENE]->(e5)
+
+-- Relación 6
+MATCH (p6: PACIENTE {nss: 39970821185})
+MATCH (e6: Expediente {numExp: 6})
+CREATE (p6)-[:TIENE]->(e6)
+
+-- Relación 7
+MATCH (p7: PACIENTE {nss: 57871379077})
+MATCH (e7: Expediente {numExp: 7})
+CREATE (p7)-[:TIENE]->(e7)
+
+-- Relación 8
+MATCH (p8: PACIENTE {nss: 38032627641})
+MATCH (e8: Expediente {numExp: 8})
+CREATE (p8)-[:TIENE]->(e8)
+
+-- Relación 9
+MATCH (p9: PACIENTE {nss: 81506782357})
+MATCH (e9: Expediente {numExp: 9})
+CREATE (p9)-[:TIENE]->(e9)
+
+-- Relación 10
+MATCH (p10: PACIENTE {nss: 88075030512})
+MATCH (e10: Expediente {numExp: 10})
+CREATE (p10)-[:TIENE]->(e10)
+
+-- Relación 11
+MATCH (p11: PACIENTE {nss: 85145513537})
+MATCH (e11: Expediente {numExp: 11})
+CREATE (p11)-[:TIENE]->(e11)
+
+-- Relación 12
+MATCH (p12: PACIENTE {nss: 43245787583})
+MATCH (e12: Expediente {numExp: 12})
+CREATE (p12)-[:TIENE]->(e12)
+
+-- Relación 13
+MATCH (p13: PACIENTE {nss: 74933179601})
+MATCH (e13: Expediente {numExp: 13})
+CREATE (p13)-[:TIENE]->(e13)
+
+-- Relación 14
+MATCH (p14: PACIENTE {nss: 36949911112})
+MATCH (e14: Expediente {numExp: 14})
+CREATE (p14)-[:TIENE]->(e14)
+
+-- Relación 15
+MATCH (p15: PACIENTE {nss: 76755356355})
+MATCH (e15: Expediente {numExp: 15})
+CREATE (p15)-[:TIENE]->(e15)
+
+-- Relación 16
+MATCH (p16: PACIENTE {nss: 53284248708})
+MATCH (e16: Expediente {numExp: 16})
+CREATE (p16)-[:TIENE]->(e16)
+
+-- Relación 17
+MATCH (p17: PACIENTE {nss: 19405663957})
+MATCH (e17: Expediente {numExp: 17})
+CREATE (p17)-[:TIENE]->(e17)
+
+-- Relación 18
+MATCH (p18: PACIENTE {nss: 14432289102})
+MATCH (e18: Expediente {numExp: 18})
+CREATE (p18)-[:TIENE]->(e18)
+
+-- Relación 19
+MATCH (p19: PACIENTE {nss: 82915103463})
+MATCH (e19: Expediente {numExp: 19})
+CREATE (p19)-[:TIENE]->(e19)
+
+-- Relación 20
+MATCH (p20: PACIENTE {nss: 99422662018})
+MATCH (e20: Expediente {numExp: 20})
+CREATE (p20)-[:TIENE]->(e20)
+
+-- Relación 21
+MATCH (p21: PACIENTE {nss: 16719494394})
+MATCH (e21: Expediente {numExp: 21})
+CREATE (p21)-[:TIENE]->(e21)
+
+-- Relación 22
+MATCH (p22: PACIENTE {nss: 48627416726})
+MATCH (e22: Expediente {numExp: 22})
+CREATE (p22)-[:TIENE]->(e22)
+
+-- Relación 23
+MATCH (p23: PACIENTE {nss: 11766223242})
+MATCH (e23: Expediente {numExp: 23})
+CREATE (p23)-[:TIENE]->(e23)
+
+-- Relación 24
+MATCH (p24: PACIENTE {nss: 66994158487})
+MATCH (e24: Expediente {numExp: 24})
+CREATE (p24)-[:TIENE]->(e24)
+
+-- Relación 25
+MATCH (p25: PACIENTE {nss: 98410427823})
+MATCH (e25: Expediente {numExp: 25})
+CREATE (p25)-[:TIENE]->(e25)
+
+-- Relación 26
+MATCH (p26: PACIENTE {nss: 17814411464})
+MATCH (e26: Expediente {numExp: 26})
+CREATE (p26)-[:TIENE]->(e26)
+
+-- Relación 27
+MATCH (p27: PACIENTE {nss: 12688293167})
+MATCH (e27: Expediente {numExp: 27})
+CREATE (p27)-[:TIENE]->(e27)
+
+-- Relación 28
+MATCH (p28: PACIENTE {nss: 66223473241})
+MATCH (e28: Expediente {numExp: 28})
+CREATE (p28)-[:TIENE]->(e28)
+
+-- Relación 29
+MATCH (p29: PACIENTE {nss: 57162679314})
+MATCH (e29: Expediente {numExp: 29})
+CREATE (p29)-[:TIENE]->(e29)
+
+-- Relación 30
+MATCH (p30: PACIENTE {nss: 16754595547})
+MATCH (e30: Expediente {numExp: 30})
+CREATE (p30)-[:TIENE]->(e30)
+
+//
