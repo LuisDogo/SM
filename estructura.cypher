@@ -146,7 +146,7 @@ CREATE (c13:Caso {nombre: "Enfermedad Renal Crónica", tratamiento: "Diálisis"}
 CREATE (c14:Caso {nombre: "Hipotiroidismo", tratamiento: "Hormona Tiroidea"});
 CREATE (c15:Caso {nombre: "Enfermedad de Parkinson", tratamiento: "Medicamentos Dopaminérgicos"});
 CREATE (c16:Caso {nombre: "Síndrome del Intestino Irritable", tratamiento: "Cambios en la dieta"});
-CREATE (c17:Caso {nombre: "Ansiedad", fDiagnostico: tratamiento: "Terapia Cognitivo-Conductual"});
+CREATE (c17:Caso {nombre: "Ansiedad", tratamiento: "Terapia Cognitivo-Conductual"});
 CREATE (c18:Caso {nombre: "Esquizofrenia", tratamiento: "Antipsicóticos"});
 CREATE (c19:Caso {nombre: "Enfermedad de Crohn", tratamiento: "Antiinflamatorios"});
 CREATE (c20:Caso {nombre: "Alergia al Polen", tratamiento: "Antihistamínicos"});
